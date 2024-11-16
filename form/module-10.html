@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Admission</title>
+</head>
+<body>
+  <!-- Header section of admission form -->
+  <div class="header" style="display: flex; align-items: center; gap: 20px;">
+    <!-- Left-aligned image with zero margin -->
+    <img src="Activenest logo.png.png" alt="active nest" style="height: 150px; width: 150px; margin: 0;">
+    
+    <!-- Center-aligned text -->
+    <div style="flex-grow: 1; text-align: center;">
+        <h1 style="font-size: 4rem; margin: 0; padding: 0; color: rgb(22, 92, 244);">Maharaja Public School</h1>
+        <h4 style="margin: 0; padding: 0; color: rgb(220, 105, 105);">
+            NH-30, Rewa-Satna Road, Bela, Satna M.P. - 485 115
+        </h4>
+        <h4 style="margin: 0; padding: 0;">
+            CBSE Affiliation No. 1030591, School Code: 50566, Dise Code: 23130111812 <br>
+            Email: founder@mpsrewa.com, website: maharajapublicschoolbela.com
+        </h4>
+        <h2 style="font-size: 2.5rem; margin: 0; padding: 0; color: red; font-family: unset;">
+            <em>Application for Admission</em>
+        </h2>
+        <h4 style="font-size: 1.5rem; margin: 0; padding: 0; color: red;">
+            Session 2024-25
+        </h4>
+    </div>
+</div>
+  <!-- Main content  -->
+   <div>
+    <form>
+      <label for="student Photo">Student's Photo<span style="color: rgb(19, 20, 18);">*</span></label>
+      <input type="file"  value="Student Photo">
+      <br>
+      
+      <br>
+      <label for="father photo">Father's Photo<span style="color: rgb(13, 12, 12);">*</span> :</label>
+      <input type="file" name="father photo" >
+       <br>
+       <br>
+    
+      <label for="mothers photo">Mother's Photo<span style="color: rgb(16, 15, 15);">*</span> :</label>
+      <input type="file" name="mothers photo" >
+       <br>
+       <br>
+    
+      <label for="Local Gardian photo">Local Gardian's Photo<span style="color: rgb(18, 18, 18);">*</span> :</label>
+      <input type="file" name="Local Gardian photo" > 
+      <br>
+      <br>
+    
+      <label for="class" style="color: red;"> Class<span style="color: rgb(12, 11, 11);">*</span> :</label>
+      <input type="text" placeholder="Enter Your Class" required>
+      <label for="Admission type" style="color: rgb(35, 33, 33); margin-left: 5cm;">Admission Type<span style="color: rgb(12, 12, 12);">*</span> :</label>
+      <input type="text" required>
+      <br>
+     <h3 style="color: rgb(14, 12, 12);">Students Details</h3>
+    
+     <label for="name">Name<span style="color: rgb(8, 8, 8);">*</span> :</label>
+    <input type="text" placeholder="Enter Your Name" required>
+    <br>
+    <br>
+    <label for="Nationality " >Nationality<span style="color: rgb(18, 17, 17);">*</span> :</label>
+    <input type="text" value="Indian" required>
+    
+    <label for="Mother Tongue" style="margin-left: 4cm;" >Mother Tongue<span style="color: rgb(26, 23, 23);">*</span> :</label>
+    <input type="text" value="Hindi" required>
+    <br><br>
+    <label for="dob">Date of Birth<span style="color: rgb(6, 6, 6);">*</span> :</label>
+    <input type="date" placeholder="Enter your D.O.B" required>
+    <br><br>
+    
+    <label for="gender" >Select your Gender<span style="color: rgb(18, 18, 18);">*</span>: </label>
+    <select name="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="transulator">transgender</option>
+      </select>
+      <br>
+      <br>
+    <label for="specially abled">Specially abled<span style="color: rgb(21, 19, 19);">*</span></label>
+    <select name="specially abled" required>
+      <option value="yes">Yes</option>
+      <option value="yes">No</option>
+    </select>
+    <br>
+    <br>
+    <label for="Religion">Religion<span>*</span></label>
+    <input type="text"required>
+    <label for="cast" style="margin-left: 4cm;">Cast<span>*</span></label>
+    <select name="cast" required>
+      <option value="General">General</option>
+      <option value="General">EBC</option>
+      <option value="General">OBC</option>
+    </select>
+    <br>
+    <br>
+    <label for="Blood group">Blood group<span>*</span></label>
+    <select name="Blood group" required>
+      <option value="B">B</option>
+      <option value="A">A</option>
+      <option value="C">C</option>
+    </select>
+    <br>
+    <br>
+    <label for="aadhaar">Enter Aadhaar Card Number:<span>*</span></label>
+        <input type="text"maxlength="12" pattern="\d{12}" placeholder="1234 5678 9123" required>
+        <br>
+        <br>
+        <label for="aadhaar">Enter Phone Number:<span>*</span></label>
+        <input type="tel" maxlength="10" pattern="\d{10}" placeholder="7781804958" required>
+        <br>
+        <br>
+    </form>
+   </div>
+<!-- Data of Students Admission -->
+ <div>
+  <table>
+    <tr>
+        <th>Subject</th>
+        <th>Maximum Marks</th>
+        <th>Marks Obtained</th>
+        <th>Percentage of Marks</th>
+        <th>Remarks</th>
+    </tr>
+    <tr>
+        <td><input type="text"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td><input type="text"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td><input type="text"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td><input type="text"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td><input type="text"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td><input type="text"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="number"></td>
+        <td><input type="text"></td>
+    </tr>
+ </table>
+ </div>
+ <br>
+ <br>
+ <button type="submit">Submit</button>
+</body>
+</html>
