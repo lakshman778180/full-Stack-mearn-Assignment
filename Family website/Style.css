@@ -1,0 +1,138 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f8f8;
+  color: #333;
+}
+
+/* Header */
+header {
+  /* background-color: #a81ab2c8; */
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  /* color: #fff; */
+  color: #2c3e50;
+  padding: 1rem 0;
+  text-align: center;
+}
+nav{
+  text-align: start;
+  padding: 1rem 0;
+height: 40px;
+background-color: rgb(46, 46, 45);
+
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color:#fff;
+  text-decoration:none;
+  padding: 0.8rem;
+  font-weight: 530;
+}
+nav ul li a:hover{
+  border-radius:.3cm;
+  /* background-color: rgb(24, 24, 245); */
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+
+}
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #bf980b;
+}
+
+
+#contact ul li a{
+text-decoration: none;
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+}
+ /* add the card of code  */
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card-info p {
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+}
+#group{
+  align-items: center;
+  width:"550px";
+  height:"844px"
+}
