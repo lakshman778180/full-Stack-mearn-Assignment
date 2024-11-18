@@ -6,6 +6,10 @@ body {
   line-height: 1.6;
   background-color: #f9f8f8;
   color: #333;
+
+}
+html{
+  scroll-behavior: smooth;
 }
 
 /* Header */
