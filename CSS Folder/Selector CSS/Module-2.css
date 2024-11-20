@@ -1,0 +1,37 @@
+/* Using in universal selector */
+*{
+  background-color: honeydew;
+}
+/* Using in type selector */
+h1{
+  color: red;
+}
+
+div input{
+  background-color: darkorange;
+  color: black;
+}
+/* using to id selector  */
+#postive{
+  background-color: coral;
+}
+/* using class selector */
+.login{
+  color: whitesmoke;
+  background-color: deepskyblue;
+}
+/* using in pseudo selector */
+.login:hover{
+background-color: indianred;
+}
+#postive:active{
+  background-color: deeppink;
+  color: black;
+}
+/* using in pseudo selector element */
+h1::first-letter{
+color: blue;
+}
+.blog{
+  margin-left: 20px;
+}
