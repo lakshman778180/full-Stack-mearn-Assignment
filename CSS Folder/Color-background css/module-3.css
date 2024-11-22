@@ -14,6 +14,7 @@ body {
   padding: 20px;
   background-color: #f9f9f9;
   color: #333;
+  overflow-x: hidden;
 }
 
 /* Styling the header */
@@ -33,7 +34,7 @@ header h1 {
 /* Navigation styles */
 nav{
   color: aliceblue;
-background-color: coral;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
   padding: 10px 0;
 }
 nav ul {
@@ -61,9 +62,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #0056b3;
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
 }
 
@@ -130,4 +129,11 @@ nav ul li a:hover {
   color: #555; /* Medium gray */
   font-size: 16px;
   line-height: 1.6; /* Improve readability */
+}
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+
 }
