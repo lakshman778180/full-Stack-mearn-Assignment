@@ -1,0 +1,133 @@
+/* Apply universal styles using 'all' property */
+/* * {
+  all: unset;
+  box-sizing: border-box;
+} */
+
+/* Reset and apply styles for body */
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Styling the header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #0056b3;
+  background-image: url(header\ image.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+/* Navigation styles */
+nav{
+  color: aliceblue;
+background-color: coral;
+  padding: 10px 0;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  /* background-color:rgba(red, green, blue, 0.7) ; */
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color:#333;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  font-weight: 300;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #0056b3;
+  border-radius: 5px;
+}
+
+/* Media Query for smaller devices */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem; /* Slightly larger text for better readability */
+    padding: 10px 15px;
+  }
+}
+
+/* Media Query for very small devices (mobile phones) */
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+
+
+
+/* Styling for the container */
+.Container {
+  max-width: 800px;
+  margin: 20px auto; /* Center the container */
+  padding: 25px;
+  background-color: #f9f9f9; /* Light gray background */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  font-family: 'Arial', sans-serif; /* Font styling */
+  transition: all 0.5s ;
+  scale: 1;
+}
+
+.Container:hover
+{
+  scale:1.1;
+}
+/* Styling for the heading (h3) */
+ h3 {
+  color: #1772cc; /* Dark blue */
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-transform: uppercase; /* Uppercase letters */
+  letter-spacing: 1px; /* Space between letters */
+}
+
+/* Styling for the subheading (h2) */
+.Container h2 {
+  color: #34495e; /* Slightly lighter blue-gray */
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Styling for the paragraph */
+.Container p {
+  color: #555; /* Medium gray */
+  font-size: 16px;
+  line-height: 1.6; /* Improve readability */
+}
