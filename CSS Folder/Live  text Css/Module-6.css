@@ -23,6 +23,7 @@ nav ul {
 nav ul li a{
 text-decoration: none;
 padding: 10px;
+color:black
 
 }
 nav ul li a:hover{
@@ -36,7 +37,10 @@ nav{
   color: aliceblue;
 
 }
-
+#para{
+  text-align: center;
+  padding-bottom: 4px;
+}
 .Container{
   max-width: 1200px;
 }
