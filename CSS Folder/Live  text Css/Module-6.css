@@ -49,8 +49,8 @@ h2{
 }
 footer{
 
- background-color: black;
- color: aliceblue;
- text-align: center;
-
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
 }
