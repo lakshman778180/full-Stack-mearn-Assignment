@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Module-7.css" />
+    <title>Blog of Box Sizing</title>
+  </head>
+  <body>
+    <header>
+      <h1>Understanding Box Sizing in HTML and CSS</h1>
+      <p id="Para">
+        When designing web layouts, understanding how the size of an element is
+        calculated is crucial. This is where the box-sizing property in CSS
+        comes into play.
+      </p>
+    </header>
+    <main class="content">
+      <section class="intro">
+        <h2>What is Box Sizing?</h2>
+        <p>
+          The <code>box-sizing</code> property in CSS determines how the total
+          size of an element is calculated, including padding and borders.
+        </p>
+      </section>
+      <section class="types">
+        <h2>Types of Box Sizing</h2>
+        <section class="type">
+          <ol start="1">
+            <li class="Box">content-box(Default)</li>
+            <ul>
+              <li>The width and height apply only to the content.</li>
+              <li>
+                Padding and border are added outside the content box, increasing
+                the total size.
+              </li>
+            </ul>
+          </ol>
+          <div class="Example">
+            <h3>Example</h3>
+            <pre>
+  div {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 10px solid black;
+    box-sizing: content-box;
+  }
+</pre
+            >
+          </div>
+          <p>
+            <strong>Total Width: </strong> 200px (content) + 20px (padding) +
+            10px (border) = <strong>250px</strong>
+          </p>
+        </section>
+        <section class="type">
+          <ol start="2">
+            <li>Border box</li>
+          </ol>
+          <ul>
+            <li>The width and height include content, padding, and border.</li>
+            <li>
+              Makes it easier to size elements without worrying about extra
+              space from padding or borders.
+            </li>
+          </ul>
+          <div class="Example">
+            <h3>Example</h3>
+            <pre>
+        div {
+          width: 200px;
+          height: 100px;
+          padding: 20px;
+          border: 10px solid black;
+          box-sizing: border-box;
+        }
+      </pre
+            >
+            <p>
+              <strong>Total Width:</strong>200px (content + padding + border)
+              =<strong>200px</strong>
+            </p>
+          </div>
+        </section>
+        <section class="type">
+          <ol start="3">
+            <li>Inherit</li>
+          </ol>
+          <ul>
+            <li>
+              The element inherits the box-sizing property from its parent.
+            </li>
+          </ul>
+          <div class="Example">
+            <h3>Example</h3>
+            <pre>
+  div {
+    box-sizing: inherit;
+  }
+</pre
+            >
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Box Sizing Property Blog | Designed by Lakshman</p>
+    </footer>
+  </body>
+</html>
