@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: linear-gradient(120deg, #f0f4f8, #d9e4f5);
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+html{
+ scroll-behavior: smooth;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #343a40;
+  padding: 0.5rem;
+  list-style: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav li a:hover {
+  color: #ffc107;
+}
+
+/* Section Styles */
+section {
+  padding: 2.5rem;
+}
+
+/* Card Styles */
+.Card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.Sub-Card {
+  background: #f9fbfc;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox Parent Examples */
+.Parents,
+.parents {
+  display: flex;
+  padding: 10px;
+  margin: 2rem 0;
+  background-color: aqua;
+  gap: 10px;
+}
+
+.Parents div,
+.parent div {
+  background: linear-gradient(120deg, #007bff, #0056b3);
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#Flex-direction {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 2rem 0;
+  background-color: aqua;
+  gap: 10px;
+}
+#Flex-direction div{
+  background: linear-gradient(120deg, #007bff, #0056b3);
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.justify-content{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 2rem 0;
+  background-color: aqua;
+  gap: 10px;
+}
+.justify-content div{
+  background: linear-gradient(120deg, #007bff, #0056b3);
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.Align-item{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 2rem 0;
+  background-color: aqua;
+  gap: 10px;
+}
+.Align-item div{
+  background: linear-gradient(120deg, #007bff, #0056b3);
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.space-between{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 2rem 0;
+  background-color: aqua;
+  gap: 10px;
+}
+.space-between div{
+  background: linear-gradient(120deg, #007bff, #0056b3);
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Footer */
+footer {
+  text-align: center;
+  background: linear-gradient(90deg, #343a40, #212529);
+  color: white;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+}

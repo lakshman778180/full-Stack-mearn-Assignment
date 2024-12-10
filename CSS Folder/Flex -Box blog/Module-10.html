@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Module-10.css">
+    <title>Flex-Box Blog</title>
+  </head>
+  <body>
+    <header>
+      <h1>Understanding Of Flex Properties</h1>
+    </header>
+    <nav>
+      <li><a href="#flex-box">Flex</a></li>
+      <li><a href="#flex-direction">Flex direction</a></li>
+      <li><a href="#Flex-wrap">Flex Wrap</a></li>
+      <li><a href="#justify-content">justify-content </a></li>
+      <li><a href="#Align-items">Align-items</a></li>
+      <li><a href="#Align-content">Align-Content</a></li>
+      <li><a href="#">Flex-flow</a></li>
+    </nav>
+    <section>
+      <div class="Card">
+        <h2 id="flex-box">Flex-Box</h2>
+        <p>
+          Flexbox, short for the "Flexible Box Layout," is a CSS layout model
+          designed to provide an efficient way to align and distribute space
+          among items in a container, even if their sizes are dynamic or
+          unknown. It’s perfect for building responsive layouts, solving
+          alignment issues, and ensuring consistent spacing.
+        </p>
+        <h2>Basic Concepts of flexbox</h2>
+        <ol>
+          <li>
+            <strong>Flex Contaner:</strong> The parent element that holds flex
+            items. Apply display: flex; or display: inline-flex; to the
+            container.
+          </li>
+          <li>
+            <strong>Flex Items:</strong>he child elements inside the flex
+            container.
+          </li>
+        </ol>
+        <div class="Sub-Card">
+          <h2>Flex Container Properties</h2>
+          <p>
+            These properties are applied to the flex container and influence its
+            behavior and the layout of its child items.
+          </p>
+          <ol>
+            <li><h3>Display</h3></li>
+            <p>Defines the container as a flex container.</p>
+            <ul>
+              <li>Values:</li>
+              <ul>
+                <li>
+                  <strong>Flex:</strong>Creates a block-level flex container
+                </li>
+                <li>
+                  <strong>inline-flex:</strong>Creates an inline-level flex
+                  container
+                </li>
+              </ul>
+            </ul>
+          </ol>
+          <div class="Parents">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </div>
+        <div class="Sub-Card">
+          <ol start="2">
+            <li><h3 id="flex-direction">Flex-direction</h3></li>
+            <p>
+              Specifies the direction of the main axis and determines how items
+              are placed in the container
+            </p>
+            <ul>
+              <li>Values:</li>
+              <ul>
+                <li>
+                  <strong>row(Default):</strong>Iteam are placed left to right
+                </li>
+                <li>
+                  <strong>row reverse:</strong>Iteam aer placed right to left.
+                </li>
+                <li>
+                  <strong> column: </strong>Iteams are placed top to bottom.
+                </li>
+                <li>
+                  <strong>column-reverse:</strong> Iteams are placed bottom to
+                  top.
+                </li>
+              </ul>
+            </ul>
+          </ol>
+          <div id="Flex-direction">
+            Flex-direction: column is applied.
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </div>
+        <div class="Sub-Card">
+          <ol start="3">
+            <li><h3 id="justify-content">justify-content</h3></li>
+          </ol>
+          <p>Aligns items along the main axis (horizontal by default).</p>
+          <ul>
+            <li>Values:</li>
+            <ul>
+              <li>
+                <strong>Flex-start(default)</strong>Iteams align to the start.
+              </li>
+              <li><strong>Flex-end:</strong>Iteams align to the end.</li>
+              <li>
+                <strong>Centre:</strong>Iteams align to the Centre to main axis.
+              </li>
+              <li>
+                <strong>space-between:</strong>Equal space between the items.
+              </li>
+              <li>
+                <strong>Space-around:</strong>Equal space betweent the item and
+                haif space between left andc right.
+              </li>
+              <li>
+                <strong>Space-evenly:</strong>Equal space after and before
+                between same sapce.
+              </li>
+            </ul>
+          </ul>
+          <div class="justify-content">
+            justify-content is centre.
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </div>
+        <div class="Sub-Card">
+          <ol start="4">
+            <li><h3 id="Align-items">Align-items</h3></li>
+            <p>Aligns items along the cross axis (vertical by default).</p>
+            <ul>
+              <li>Values:</li>
+              <ul>
+                <li>
+                  <strong>stretch(default)</strong>Iteams strech to fill the
+                  container.
+                </li>
+                <li><strong>Flex-start</strong>Align items at the start.</li>
+                <li><strong>flex-end:</strong>Align items at the end.</li>
+                <li><strong>centre</strong>Align items at the centre</li>
+                <li>
+                  <strong>baseline:</strong>Align items along their baseline.
+                </li>
+              </ul>
+            </ul>
+          </ol>
+          <div class="Align-item">
+            align Iteam in centre.
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </div>
+        <div class="Sub-Card">
+          <ol start="5">
+            <li><h3 id="Align-content">Align-Content</h3></li>
+            <p>
+              Aligns multiple lines of items (if wrapping is enabled) along the
+              cross axis.
+            </p>
+            <ul>
+              <li>Values:</li>
+              <ul>
+                <li>
+                  <strong>streches(default)</strong>Lines stretch to fill space.
+                </li>
+                <li><strong>flex-start:</strong>Lines align at the start</li>
+                <li><strong>flex-end:</strong>Lines align at the end.</li>
+                <li><strong>centre:</strong>Lines align at the centre.</li>
+                <li>
+                  <strong>space-between:</strong>Equal space between the lines
+                </li>
+                <li>
+                  <strong>space around:</strong>Equal space between lines and
+                  haif space of the between space.
+                </li>
+                <li>
+                  <strong> Space-evenly: </strong>Equal space before after and
+                  between lines.
+                </li>
+              </ul>
+            </ul>
+          </ol>
+          <div class="space-between">
+            justify-content is space-between apply
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </div>
+        <div class="Sub-Card">
+<ol start="6">
+<li><h3 id="Flex-wrap">Flex Wrap</h3></li>
+<ul>
+  <li>Values:</li>
+  <ul>
+    <li><strong>nowrap(default)</strong>All items stay on a single line.</li>
+    <li><strong>wrap:</strong>Items wrap to the next line without the width is reduces.</li>
+    <li><strong>wrap-reverse:</strong>Items wrap to the next line in reverse order.</li>
+  </ul>
+</ul>
+</ol>
+        </div>
+      </div>
+      <footer>
+        <p>@ copy right 2024 Blog of flex box
+          | Developer Lakshaman Raj
+        </p>
+      </footer>
+    </section>
+  </body>
+</html>

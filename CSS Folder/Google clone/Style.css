@@ -64,6 +64,11 @@ justify-content: space-between;
 .search_input .material-symbols-outlined{
   color:gray
 }
+.mid{
+  display: flex;
+  justify-content: center;
+  /* margin: 10px; */
+}
 .button{
   margin-top: 30px;
   display: flex;
