@@ -17,7 +17,8 @@
       <li><a href="#justify-content">justify-content </a></li>
       <li><a href="#Align-items">Align-items</a></li>
       <li><a href="#Align-content">Align-Content</a></li>
-      <li><a href="#">Flex-flow</a></li>
+      <li><a href="#Flex-flow">Flex-flow</a></li>
+      <li><a href="#Flex-Items">Flex-Items</a></li>
     </nav>
     <section>
       <div class="Card">
@@ -213,6 +214,75 @@
   </ul>
 </ul>
 </ol>
+        </div>
+        <div class="Sub-Card">
+<ol start="7">
+<li><h3 id="Flex-flow"><strong>Flex-flow:</strong></h3>The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties.</li>
+<h4>Example:</h4>
+<pre>
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+</pre>
+</ol>
+        </div>
+        <div class="Sub-Card"> 
+          <ol>
+            <li><h3>Flex-Items</h3></li>
+            <p>The direct child elements of a flex container automatically becomes flexible (flex) items.</p>
+            <ul>
+              <li><strong>Order:</strong>The order property specifies the order of the flex items.</li>
+              <h4>Example</h4>
+              <div class="Parents">
+                apply the property of align items order arrangement:
+                <div style="order: 3;">1</div>
+                <div style="order: 2;">2</div>
+                <div style="order: 1;">3</div>
+                <div style="order: 4;">4</div>
+              </div>
+              <li><strong>Flex-grow:</strong>The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items.</li>
+              The value must be a number, default value is 0.
+              <h4>Example</h4>
+              <div class="Parents">
+                apply the property of align items Flex-grow arrangement:
+                <div style="flex-grow: 2;">1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+              </div>
+              <li><strong>flex-shrink:</strong>The flex-shrink property specifies how much a flex item will shrink relative to the rest of the flex items.</li>
+              The value must be a number, default value is 1.
+              <h4>Example</h4>
+              <div class="Parents">
+                apply the property of align items Flex-shrink arrangement:
+                <div>1</div>
+                <div style="flex-shrink: 2;">2</div>
+                <div>3</div>
+                <div>4</div>
+              </div>
+              <li><strong>flex-basis:</strong>The flex-basis property specifies the initial length of a flex item.</li>
+              <h4>Example</h4>
+              <div class="Parents">
+                apply the property of align items Flex basis arrangement:
+                <div>1</div>
+                <div>2</div>
+                <div style="flex-basis: 200px;">3</div>
+                <div>4</div>
+              </div>
+              <li><strong>flex:</strong>The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties.</li>
+              <h4>Example</h4>
+              <div class="Parents">
+                apply the property of align items Flex arrangement:
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div style="flex: 0 0 100px;">4</div>
+              </div>
+              <li><strong>align-self:</strong>The align-self property specifies the alignment for the selected item inside the flexible container.</li>
+              <p>The align-self property overrides the default alignment set by the container's align-items property.</p>
+            </ul>
+          </ol>
         </div>
       </div>
       <footer>
