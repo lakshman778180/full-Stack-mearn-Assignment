@@ -26,9 +26,108 @@ flex-wrap: wrap;
   align-items: center;
 border-radius: 12px;
 }
+.container{
+  background-color: #C4EBFA;
+  width: 600px;
+  height: 500px;
+  margin-top: 20px;
+  padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+}
+.Header{
+  background-color: #03BFB1;
+  width: 100%;
+  height: 70px;
+  /* margin: 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  color: aliceblue;
+}
+.navigation{
+  width: 100%;
+  height: 70px;
+  /* margin: 10px; */
+  background-color: #33C361;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  color: aliceblue;
+}
+.main-container{
+
+  background-color: #C4EBFA;
+  width: 100%;
+  display: flex;
+
+  height: 240px;
+  gap: 20px;
+}
+.Aside{
+  width: 40%;
+height: 240px;
+background-color: #6EDB6E;
+display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  color: aliceblue;
+}
+
+.footer{
+  background-color:  #03BFB1;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  color: aliceblue;
+}
+.main-content{
+  width: 100%;
+height: 240px;
+background-color: #C4EBFA;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.content{
+  width: 100%;
+height: 120px;
+  background-color:#0F98C6 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  color: aliceblue;
+}
+.section{
+  background-color: #005B92;
+  width: 100%;
+height: 120px;
+display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  color: aliceblue;
+}
+h1{
+  text-align: center;
+  font-size: 45px;
+  color: aliceblue;
+  background-color: #0F98C6;
+  border-radius: 15px;
+}
   </style>
 </head>
 <body>
+  <h1>Different Types of Layout</h1>
   <div class="Parents">
 <div class="child">1</div>
 <div class="child">2</div>
@@ -36,6 +135,30 @@ border-radius: 12px;
 <div class="child">4</div>
 <div class="child">5</div>
 <div class="child">6</div>
+  </div>
+  <div class="container">
+<div class="Header">
+  Header
+</div>
+<div class="navigation">
+Navigation
+</div>
+<div class="main-container">
+<div class="Aside">
+Aside
+</div>
+<div class="main-content">
+<div class="content">
+content
+</div>
+<div class="section">
+Section
+</div>
+</div>
+</div>
+<div class="footer">
+Footer
+</div>
   </div>
 </body>
 </html>
