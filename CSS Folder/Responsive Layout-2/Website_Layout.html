@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTPower Grid HomepageF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layouts</title>
+    <style>
+      .Container {
+        height: 650px;
+        width: 850px;
+
+        background-color: white;
+        border: 7px solid #808080;
+        box-sizing: border-box;
+      }
+      img {
+        width: 100%;
+      }
+      .header {
+        background-color: white;
+        padding: 6px;
+      }
+      .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ddaa00;
+        font-weight: 500;
+        color: white;
+        font-size: 20px;
+      }
+      .navbar {
+        display: flex;
+        background-color: #e1e1e1;
+        justify-content: space-between;
+        padding: 12px;
+      }
+      .nav-items {
+        padding: 10px 20px;
+        border: 1.5px solid black;
+        color: #ddaa00;
+      }
+      .nav-items:hover {
+        font-weight: 400;
+      }
+      .main-content {
+        display: flex;
+        padding: 2px;
+        gap: 15px;
+        background-color: #808080;
+        height: 430px;
+        /* justify-content: center;
+        align-items: center; */
+      }
+      #imag {
+        width: 100%;
+        height: 52%;
+        overflow: hidden;
+      }
+      .small-content {
+        background-color: white;
+        width: 25%;
+        flex-wrap: wrap;
+        height: 95%;
+      }
+      .small-content p {
+        padding-left: 5px;
+      }
+      .Big-content {
+        width: 50%;
+        height: 95%;
+        background-color: white;
+      }
+      .Big-content p{
+        padding-left: 5px;
+      }
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ddaa00;
+        font-weight: 500;
+        color: white;
+        font-size: 20px;
+        width: 100%;
+        height: 7%;
+     
+      }
+     
+      .parent-container {
+    height: 410px;
+    width: 430px;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-row1{
+    display: flex;
+    gap: 10px;
+}
+.large-box{
+    width: 150px;
+    height: 200px;
+    background-color: #FF6348;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.box2{
+    width: 230px;
+    height: 200px;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.smallbox{
+    background-color: #FF6348;
+    height: 47%;
+    width: 47%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.box-row2{
+    display: flex;
+    gap: 10px;
+}
+.Column-container{
+  background-color: white;
+  border: 1.5px solid black;
+  width: 510px;
+  height: 520px;
+padding: 10px;
+display: flex;
+gap: 10px;
+  
+}
+.column-1{
+  background-color: #B5E7E7;
+  /* padding-bottom: 40px; */
+  width: 40%;
+  height: 520px;
+}
+.column-2{
+  background-color: #F7F3DA;
+  width: 40%;
+  /* padding: 0px; */
+  height: 520px;
+
+
+}
+.column-3{
+background-color:#8CB98C ;
+width: 55%;
+height: 520px;
+
+}
+
+    </style>
+  </head>
+  <body >
+    <!-- Layout-1 -->
+  <div class="Container">
+      <div class="header">
+        <div class="heading">
+          <h2>Power Grid Homepage</h2>
+        </div>
+        <div class="navbar">
+          <div class="nav-items">Home</div>
+          <div class="nav-items">About</div>
+          <div class="nav-items">Blog</div>
+          <div class="nav-items">Careers</div>
+          <div class="nav-items">Contact Us</div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="small-content">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA5TFr2P4Shfl2xEc1R-nbZw_9DosQThOJYw&s"
+            alt="cats"
+          />
+          <p>Lo Officiis pariatur incidunt veritatis magni error!</p>
+          <button>Go Somewhere</button>
+        </div>
+        <div class="small-content">
+          <img
+            src="https://www.shutterstock.com/image-photo/beautiful-horse-running-autumn-260nw-2430263853.jpg"
+            alt="cats"
+          />
+          <p>
+            Lo Officiis pariatur incidunt veritatis magni error! Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Alias voluptatibus
+            aliquam voluptatum fuga veniam excepturi.
+          </p>
+          <button>Click me</button>
+        </div>
+        <div class="Big-content">
+          <img
+            id="imag"
+            src="https://image.shutterstock.com/image-photo/majestic-owl-perched-on-branch-260nw-2517672389.jpg"
+            alt=""
+          />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+            voluptatum qui quidem consectetur vel repellat neque asperiores quo
+            sed nisi facere corrupti repudiandae praesentium possimus, atque
+            impedit, iusto nobis veniam voluptatibus expedita placeat id
+            necessitatibus!
+          </p>
+          <button>Click me</button>
+        </div>
+      </div>
+      <footer>© Copy right Developer Lakshman Raj</footer>
+    </div>
+    <!-- Layout-2 -->
+    <div class="parent-container">
+      <div class="box-row1">
+          <div class="large-box">1</div>
+          <div class="box2">
+              <div class="smallbox">2</div>
+              <div class="smallbox">3</div>
+              <div class="smallbox">4</div>
+              <div class="smallbox">5</div>
+          </div>
+      </div>
+      <div class="box-row2">
+          <div class="box2">
+              <div class="smallbox">2</div>
+              <div class="smallbox">3</div>
+              <div class="smallbox">4</div>
+              <div class="smallbox">5</div>
+          </div>
+          <div class="large-box">1</div>
+      </div>
+  </div>
+  <!-- Layout-3 -->
+   <div class="Column-container">
+<div class="column-1">
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae sunt recusandae vel adipisci, error placeat similique debitis vero dignissimos quod aspernatur, maxime veniam repellendus fuga. Maxime fugit libero sint. Ipsam reprehenderit, veritatis eaque natus commodi debitis aperiam, omnis sunt consequuntur rerum possimus quis architecto voluptate est eos, dolor impedit fugit!</p>
+</div>
+<div class="column-2">
+<p>
+  Lorem ipsum dolor Eum, officiis minus similique temporibus veniam modi necessitatibus magni excepturi corrupti tempora eius aliquam alias porro mollitia commodi sed eos laudantium exercitationem officia eligendi consectetur 
+  loream s,uhadi, dcub   iuidsh soidbl o iudk  sd,ijd k,jds  quaerat doloremque quisquam ad ldffkdes loesfn k,fse oierltveritatis! Doloribus temporibus mollitia odit quis architecto in est similique? Tempora enim atque voluptas exercitationem quo nulla aliquam tenetur provident!
+</p>
+</div>
+<div class="column-3">
+<p>
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam laudantium rem corrupti id voluptatibus! Libero qui, quam, id placeat dolor reprehenderit iste, cum incidunt natus esse temporibus numquam magni ex suscipit dicta molestiae vitae ducimus. Quos ipsum consectetur iure dolore nisi atque sint explicabo tenetur fugiat voluptate, totam sit ratione consequuntur amet, possimus earum doloremque sapiente, fuga in impedit perferendis dolorum accusamus praesentium. Odio accusantium autem recusandae sed ullam esse officiis, perspiciatis animi nihil veniam porro quasi assumenda excepturi voluptas.
+</p>
+</div>
+   </div>
+  </body>
+</html>
