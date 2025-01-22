@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TypeOf Table</title>
+  <style>
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    }
+    th,td{
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+    th{
+      background-color: #0baf8b;
+      
+    }
+    td{
+      background-color: coral;
+      font-size: 18px;
+    }
+#head{
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+  <table>
+  <h1 id="head">Table of Datatype(Primitive,Nonprimitive)</h1>
+    <tr>
+      <th>Data type</th>
+      <th>Typeof data</th>
+      <th>Example</th>
+      <th>Output console.log</th>
+    </tr>
+    <tr>
+      <td>String</td>
+      <td>string</td>
+      <td>let name = "John";</td>
+      <td>console.log(typeof name);</td>
+    </tr>
+    <tr>
+      <td>Number</td>
+      <td>number</td>
+      <td>let num = 10;</td>
+      <td>console.log(typeof num);</td>
+       </tr>
+      <tr>
+        <td>Boolean</td>
+        <td>boolean</td>
+        <td>let isTrue = true;</td>
+        <td>console.log(typeof isTrue);</td>
+        </tr>
+        <tr>
+          <td>Null</td>
+          <td>object</td>
+          <td>let nullValue = null;</td>
+          <td>console.log(typeof nullValue);</td>
+        </tr>
+        <tr>
+          <td>Undefined</td>
+          <td>undefined</td>
+          <td>let x;</td>
+          <td>console.log(typeof x);</td>
+          </tr>
+          <tr>
+            <td>Object</td>
+            <td>object</td>
+            <td>let person = {name: "John", age: 30};</td>
+            <td>console.log(typeof person);</td>
+            </tr>
+            <tr>
+              <td>function</td>
+              <td>function</td>
+              <td>function myFunction() {};</td>
+              <td>console.log(typeof myFunction);</td>
+            </tr>
+            <tr>
+              <td>Array</td>
+              <td>object</td>
+              <td>let fruits = ["Apple", "Banana", "Mango"];</td>
+              <td>console.log(typeof fruits);</td>
+              </tr>
+            
+  </table>
+</body>
+</html>

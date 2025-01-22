@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog_let_var_const</title>
+  <style>
+    nav{
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      top: 0;
+      position: sticky;
+      z-index: 1000;
+    }
+  
+    nav ul{
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li{
+      margin: 0 10px;
+      border-radius: 10px;
+      padding:12px ;
+    }
+    nav ul li:hover{
+      background-color: red;
+      color: white;
+    }
+    nav ul li a{
+      text-decoration: none;
+      color: white;
+    }
+    h1{
+      text-align: center;
+    }
+    ol{
+      margin-left: 20px;
+    }
+    ul{
+      margin-left: 20px;
+    }
+    pre{
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    code{
+      font-size: 12px;
+    }
+    .box{
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 8px;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s;
+      scale: 1;
+    }
+    .box:hover{
+      scale: 1.02;
+    }
+.Topic{
+  color: red;
+  font-size: 28px;
+}
+footer{
+  background-color: #333;
+  color:white;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#var">Blog Var</a></li>
+      <li><a href="#let">Blog Let</a></li>
+      <li><a href="#const">Blog Const</a></li>
+    </ul>
+  </nav>
+  <h1>Declaring Variable</h1>
+  <div class="box">
+    <ol start="1">
+      <li><strong class="Topic" id="var">.var</strong></li>
+      <ul>
+        <li>var is function scope</li>
+        <li>var can be re-declared</li>
+        <li>var can be updated</li>
+        </ul>
+    </ol>
+    <div>
+      <h2>Example:</h2>
+      <pre>
+        <code>
+          var name = "John";
+          var name = "Doe";
+          name = "Smith";
+          console.log(name);
+        </code>
+      </pre>
+  </div>
+  </div>
+  <div class="box">
+    <ol start="2">
+      <li><strong class="Topic" id="let">.let</strong> </li>
+      <ul>
+        <li>let is block scope</li>
+        <li>let can't be re-declared</li>
+        <li>let can be updated</li>
+        </ul>
+    </ol>
+    <div>
+      <h2>Example:</h2>
+      <pre>
+        <code>
+          let name = "John";
+          let name = "Doe";
+          name = "Smith";
+          console.log(name);
+        </code>
+      </pre>
+    </div>
+  </div>
+  <div class="box">
+    <ol start="3">
+      <li><strong class="Topic" id="const">.const</strong></li>
+      <ul>
+        <li>const is block scope</li>
+        <li>const can't be re-declared</li>
+        <li>const can't be updated</li>
+        </ul>
+    </ol>
+    <div>
+      <h2>Example:</h2>
+      <pre>
+        <code>
+          const name = "John";
+          const name = "Doe";
+          name = "Smith";
+          console.log(name);
+        </code>
+      </pre>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 |  Developer by  Lakshman jha All Right Reserved</p>
+  </footer>
+</body>
+</html>
