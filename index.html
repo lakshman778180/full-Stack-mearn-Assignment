@@ -1,96 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assignment Full Stack</title>
-  <style>
-    /* General body styling */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: linear-gradient(135deg, #007acc, #34d1bf);
-      color: white;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Full Stack</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Center content within a container */
-    .container {
-      max-width: 600px;
-      width: 90%;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-    /* Heading styles */
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-    /* Details element styling */
-    details {
-      margin: 15px 0;
-      background: #ffffff;
-      border-radius: 5px;
-      color: #333;
-      overflow: hidden;
-    }
+        /* Animated particles */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='3' fill='rgba(255,255,255,0.1)'/%3E%3C/svg%3E") repeat;
+            animation: particleMove 20s linear infinite;
+            z-index: 1;
+        }
 
-    summary {
-      cursor: pointer;
-      padding: 10px;
-      background: #007acc;
-      color: white;
-      font-weight: bold;
-      border-radius: 5px 5px 0 0;
-    }
+        @keyframes particleMove {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
 
-    /* Links styling */
-    a {
-      display: block;
-      padding: 10px;
-      text-decoration: none;
-      color: #007acc;
-      background: #f0f0f0;
-      border-radius: 0 0 5px 5px;
-      transition: all 0.3s, color 0.3s;
-    }
+        .container {
+            position: relative;
+            max-width: 600px;
+            width: 90%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 2;
+        }
 
-    a:hover {
-      background: #007acc;
-      color: white;
-    }
-  </style>
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: white;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        details {
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        details:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        summary {
+            cursor: pointer;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: 500;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            outline: none;
+        }
+
+        summary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        details[open] summary {
+            border-radius: 12px 12px 0 0;
+        }
+
+        a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(10px);
+        }
+
+        /* Animation for details content */
+        details[open] a {
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            summary {
+                padding: 12px 15px;
+            }
+
+            a {
+                padding: 12px 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Full Stack Development | ThunderGits</h1>
-    <details>
-      <summary>All Assignments of HTML</summary>
-      <a href="./HTML Folder Assingment/Structure.html" target="_blank">HTML Homework's and Projects Folder</a>
-    </details>
-    
-    <details>
-      <summary>All Assignments of CSS</summary>
-      <a href="./CSS Folder/style.html" target="_blank">CSS Homework Folder</a>
-    </details>
-     
-    <details>
-      <summary>All Assignments of JS</summary>
-      <a href="./JS Folder/js.html" target="_blank">java Script Homework Folder</a>
-    </details>
-    <details>
-      <summary>Live Test</summary>
-      <a href="./CSS Folder/Live  text Css/module-6.html">Live Test-1</a>
-    </details>
-    <h1>Developer Lakshman Jha</h1>
-  </div>
+    <div class="container">
+        <h1>Full Stack Shivam Jha | ThunderGits</h1>
+        <details>
+            <summary>All Assignments of HTML</summary>
+            <a href="./HTML Folder Assingment/Structure.html" target="_blank">HTML Homework's and Projects Folder</a>
+        </details>
+        
+        <details>
+            <summary>All Assignments of CSS</summary>
+            <a href="./CSS Folder/style.html" target="_blank">CSS Homework Folder</a>
+        </details>
+        
+        <details>
+            <summary>All Assignments of JS</summary>
+            <a href="./JS Folder/js.html" target="_blank">Java Script Homework Folder</a>
+        </details>
+
+        <details>
+            <summary>Live Test</summary>
+            <a href="./CSS Folder/Live  text Css/module-6.html">Live Test-1</a>
+        </details>
+
+        <h1>Developer Lakshman Jha</h1>
+    </div>
 </body>
 </html>
