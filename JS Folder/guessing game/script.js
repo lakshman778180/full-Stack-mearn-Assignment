@@ -2,7 +2,7 @@ const guessInput = document.getElementById('guessInput');
 const guessButton = document.getElementById('guessButton');
 const resultElement = document.getElementById('result');
 
-let secretNumber = Math.floor(Math.random() * 100) + 1;
+let secretNumber = Math.floor(Math.random() * 10) + 1;
 let attempts = 0;
 
 guessButton.addEventListener('click', () => {
