@@ -1,59 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movie rating</title>
+  <title>Movie Rating</title>
   <style>
-    .container{
+    .container {
       width: 300px;
-      height: 300px;
+      height: auto;
       background-color: aqua;
       color: black;
       border-radius: 10px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: relative;
-      top: 0;
-      left: 40%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
     }
-    .container-main{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    h2{
+    h2 {
       color: brown;
     }
-    button{
-      padding-left: 10px;
+    button {
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <div class="main-container">
-      <h1>Rating the Movie</h1>
-      <button onclick="increment()" id="Click">Click me</button>
-      <h2>Total Rating: <span id="totalRating">0</span></h2>
-      <h2>Average Rating: <span id="averageRating">0</span></h2>
-    </div>
+    <h1>Rating the Movie</h1>
+    <p id="movieName"></p>
+    <button onclick="increment()">Rate Movie</button>
+    <h2>Total Rating: <span id="totalRating">0</span></h2>
+    <h2>Average Rating: <span id="averageRating">0</span></h2>
   </div>
 
   <script>
-    let ratings = []; 
-    let totalRating = 0; 
-
-    function increment() {
-      
-      const newRating = Math.floor(Math.random() * 9) + 1;
-      ratings.push(newRating); 
-      totalRating += newRating;
-      const averageRating = totalRating / ratings.length;
-      document.getElementById('totalRating').textContent = totalRating;
-      document.getElementById('averageRating').textContent = averageRating.toFixed(2); 
+    let movieName = prompt("Enter Your Favourite movie name");
+    let rating =[];
+    while(true){
+      let ratingInput = prompt("Enter the rating " +movieName);
+      if(ratingInput==="done"){
+        break;
+      }
+      var ratingvalue = parseInt(ratingInput);
+      if(ratingvalue>=1 && ratingvalue<=10){
+        rating.push(ratingvalue);
+      }
+      else{
+        alert("Please Enter the Rating betweeen 1 to 10");
+      }
     }
+// console.log(rating);
+let totalRating = 0;
+for(let i =0 ;i<rating.length ; i++){
+  totalRating = totalRating+rating[i];
+}
+let averageRating = totalRating/rating.length;
+alert("The Average Rating for the " + movieName + " is " + averageRating + "and the total rating is " + totalRating);
   </script>
+
 </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Methods in JS</title>
+</head>
+<body>
+  <h1>JavaScript Object Assignment</h1>
+  <p id="demo"></p>
+
+  <script>
+    const student = {
+      name:"Rahul",
+      age:21,
+      city:"Delhi",
+      marks: { math: 85, science: 90, english: 78 },
+      
+      getDetails: function() {
+        return `${this.name} is ${this.age} years old and lives in ${this.city}.`;
+      },
+      calculateAverage: function() {
+        let totalMarks = this.marks.math + this.marks.science + this.marks.english;
+        let subjects = Object.keys(this.marks).length;
+        return (totalMarks / subjects).toFixed(2)
+      }
+    };
+
+
+    document.getElementById("demo").innerHTML = 
+      `${student.getDetails()} <br> Average Marks: ${student.calculateAverage()}`;
+  </script>
+</body>
+</html>
