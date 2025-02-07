@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mountain View</title>
+  <style>
+    body {
+      background-image: url(./moutain.webp);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      backdrop-filter: blur(3px);
+    }
+
+    h2 {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #cc0000;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 15px;
+      max-width: 80%;
+    }
+  </style>
+</head>
+<body>
+  <h2>Enjoy View of the Mountain</h2>
+  <button onclick="stopDescription()">Stop🤐!</button>
+  <p id="demo"></p>
+
+  <script>
+    const mountain = () => {
+      document.getElementById("demo").innerHTML += 
+        "Mountains are large landforms that rise above the surrounding area, with steep sides and a sharp or rounded peak.<br>";
+    };
+
+
+    const interval = setInterval(mountain, 2000);
+
+    const stopDescription = () => {
+      clearInterval(interval);
+      alert("Enjoy the view😊!");
+    };
+  </script>
+</body>
+</html>
+
