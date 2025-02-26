@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Game</title>
+    <link rel="stylesheet" href="drum.css">
+</head>
+<body>
+  <h2 style="text-align: center; color: wheat; display: flex; justify-content: center;">Prees the Key then playing Drum game</h2>
+    <div class="keys-container">
+        <div data-key="65" class="key">A</div>
+        <div data-key="83" class="key">S</div>
+        <div data-key="68" class="key">D</div>
+        <div data-key="70" class="key">F</div>
+        <div data-key="71" class="key">G</div>
+        <div data-key="72" class="key">H</div>
+        <div data-key="74" class="key">J</div>
+        <div data-key="75" class="key">K</div>
+        <div data-key="76" class="key">L</div>
+    </div>
+
+    <audio data-key="65" src="Sound/boom.wav"></audio>
+    <audio data-key="83" src="Sound/clap.wav"></audio>
+    <audio data-key="68" src="Sound/hihat.wav"></audio>
+    <audio data-key="70" src="Sound/kick.wav"></audio>
+    <audio data-key="71" src="Sound/openhat.wav"></audio>
+    <audio data-key="72" src="Sound/ride.wav"></audio>
+    <audio data-key="74" src="Sound/snare.wav"></audio>
+    <audio data-key="75" src="Sound/tink.wav"></audio>
+    <audio data-key="76" src="Sound/tom.wav"></audio>
+
+    <script src="Drum.js"></script>
+</body>
+</html>

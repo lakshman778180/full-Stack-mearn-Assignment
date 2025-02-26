@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gpa</title>
+</head>
+<body>
+  <h2>to calculated gpa</h2>
+  <script>
+    let student = [
+      {
+        name:"Lakshman  jha",
+        marks:95,
+      },
+      {
+        name:"Rohan  jha",
+        marks:90,
+      },
+      {
+        name:"Ajit jha",
+        marks:85,
+      }
+    ];
+let gpa = student.map((el)=>{
+  return el.marks/10;
+});
+  </script>
+</body>
+</html>

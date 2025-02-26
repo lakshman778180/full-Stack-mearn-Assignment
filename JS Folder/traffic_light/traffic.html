@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic light problems</title>
+</head>
+<body>
+  <h1>Using in console</h1>
+
+  <script>
+    function trafficLightCycle() {
+      setTimeout(() => {
+        console.log(" Green light on");
+      }, 1000);
+
+      setTimeout(() => {
+        console.log(" Yellow light on");
+      }, 6000);
+
+      setTimeout(() => {
+        console.log(" Red light on");
+      }, 8000);
+      setTimeout(trafficLightCycle, 9000);
+    }
+    trafficLightCycle();
+  </script>
+</body>
+</html>
