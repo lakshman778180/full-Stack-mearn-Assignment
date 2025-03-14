@@ -1,0 +1,38 @@
+.completed {
+  color: grey;
+  text-decoration: line-through;
+}
+.container{
+  background-color: #4C392B;
+  border-radius: 20px;
+  border: 2px solid whitesmoke;
+  padding: 15px;
+  width: 300px;
+  height: 200px;
+  margin-right: 80px;
+  color: wheat;
+
+}
+#taskInput {
+  background-color: #4C392B;
+  border-radius: 5px;
+  color: wheat;
+  border: 2px solid white;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://img.freepik.com/free-photo/top-view-notepad-with-autumn-pomegranate-pine-cones_23-2148684090.jpg?t=st=1741871454~exp=1741875054~hmac=3d979c3303c4915dcfcf031983863216144f0a2ee5d0768e175abc6248963a0b&w=996');
+  overflow-x: hidden;
+}
+button{
+  background-color: red;
+  border-radius: 5px;
+  border: 1px solid wheat;
+  margin-left: 5px;
+  height: 30px;
+  color: white;
+}
