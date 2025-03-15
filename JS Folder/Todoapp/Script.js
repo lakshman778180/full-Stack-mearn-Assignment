@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
       li.innerHTML = `
       ${taskText} 
-      <button class="delete">❌</button>`;
+      <button class="delete">✖</button>`;
 
       taskList.appendChild(li);
 
