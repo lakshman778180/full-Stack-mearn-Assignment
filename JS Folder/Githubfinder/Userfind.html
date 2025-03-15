@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Finder</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Animated GitHub Copilot Background */
+    body {
+      background: linear-gradient(-45deg, #4a6998, #c27416, #0d1117, #81b63d);
+      background-size: 400% 400%;
+      animation: gradient 8s ease infinite;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.6);
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 255, 255, 0.4);
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      background: #222;
+      color: white;
+      text-align: center;
+      font-size: 16px;
+      box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.4);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00c3ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+      box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.6);
+    }
+
+    button:hover {
+      background-color: #008bd4;
+      box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.9);
+    }
+
+    .profile-card {
+      margin-top: 20px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0px 4px 20px rgba(0, 255, 255, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-card:hover {
+      transform: scale(1.05);
+    }
+
+    .profile-card img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      border: 3px solid #00c3ff;
+    }
+
+    .profile-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #00c3ff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .profile-card a:hover {
+      color: #ff00c3;
+      text-shadow: 0px 0px 10px rgba(255, 0, 195, 0.6);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 500px) {
+      .container {
+        width: 90%;
+      }
+      .profile-card {
+        width: 90%;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>GitHub Profile Finder</h1>
+
+  <div class="container">
+    <input type="text" id="username" placeholder="Enter GitHub Username">
+    <button onclick="getUsername()">Get Profile</button>
+  </div>
+
+  <div id="profile"></div> <!-- Profile details will be shown here -->
+
+  <script>
+    function getUsername() {
+      let name = document.getElementById("username").value.trim();
+      if (name === "") {
+        alert("Please enter a username");
+        return;
+      }
+
+      let url = `https://api.github.com/users/${name}`;
+      
+      fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("User not found");
+          }
+          return response.json();
+        })
+        .then(data => {
+          document.getElementById("profile").innerHTML = `
+            <div class="profile-card">
+              <img src="${data.avatar_url}" alt="Profile Picture">
+              <h2>${data.name || "No Name Available"}</h2>
+              <p><strong>Username:</strong> ${data.login}</p>
+              <p><strong>Public Repos:</strong> ${data.public_repos}</p>
+              <p><strong>Followers:</strong> ${data.followers}</p>
+              <a href="${data.html_url}" target="_blank">Visit GitHub Profile</a>
+            </div>
+          `;
+          console.log("All data",data);
+        })
+        .catch(error => {
+          document.getElementById("profile").innerHTML = `<p style="color: red;">${error.message}</p>`;
+        });
+    }
+  </script>
+
+</body>
+</html>
+
