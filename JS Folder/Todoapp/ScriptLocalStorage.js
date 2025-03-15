@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add Task to the DOM
   const addTaskToDOM = (taskText, completed = false) => {
       const li = document.createElement("li");
-      li.innerHTML = `${taskText} <button class="delete">❌</button>`;
+      li.innerHTML = `${taskText} <button class="delete">✖</button>`;
 
       if (completed) li.classList.add("completed");
 
