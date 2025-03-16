@@ -14,7 +14,7 @@
 
     /* Animated GitHub Copilot Background */
     body {
-      background: linear-gradient(-45deg, #4a6998, #c27416, #0d1117, #81b63d);
+      background: linear-gradient(-90deg, #4a6998, #c27416, #333131, #81b63d);
       background-size: 400% 400%;
       animation: gradient 8s ease infinite;
       color: #fff;
@@ -76,13 +76,16 @@
     }
 
     .profile-card {
+      margin: auto;
+      max-width: 400px;
       margin-top: 20px;
       padding: 20px;
       background: rgba(0, 0, 0, 0.9);
-      border-radius: 10px;
+      border-radius: 15px;
       text-align: center;
       box-shadow: 0px 4px 20px rgba(0, 255, 255, 0.4);
       transition: transform 0.3s ease;
+
     }
 
     .profile-card:hover {
@@ -118,6 +121,9 @@
       .profile-card {
         width: 90%;
         margin: auto;
+        margin-top: 20px;
+        background-color: transparent;
+        color: white;
       }
     }
   </style>
