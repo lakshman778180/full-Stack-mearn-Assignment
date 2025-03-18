@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Div Box</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: cornflowerblue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    body:hover {
+      background-color: rgb(112, 206, 17);
+    
+    }
+
+    h2 {
+      color: black;
+      font-weight: 700;
+      text-shadow: 2px 2px rgb(163, 141, 141);
+      font-size: 30px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .main {
+      max-width: 90%;
+      width: 400px;
+      height: 400px;
+      background-color: chocolate;
+      border: 2px solid black;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 2s;
+      scale: 1;
+      
+    }
+
+    .main:hover {
+      background-color: #F7651F;
+      border-radius: 50%;
+  
+    }
+
+    .content {
+      width: 90%;
+      max-width: 375px;
+      height: 375px;
+      border: 3px solid black;
+      border-radius: 18px;
+      background-color: darkorchid;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 2s;
+      scale: 1;
+    }
+
+    .content:hover {
+      background-color: #F7F7F7;
+      border-radius: 50%;
+     
+    }
+
+    .box {
+      width: 300px;
+      height: 300px;
+      border: 3px solid black;
+      border-radius: 50px;
+      background-color: rgb(17, 181, 214);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 2s;
+      scale: 1;
+    }
+
+    .box:hover {
+      background-color:#046736;
+      border-radius: 50%;
+      scale: 1.1;
+    }
+    .hello{
+      color: white;
+      font-size: 25px;
+      text-shadow: 2px 2px rgb(25, 24, 24);
+    }
+
+  </style>
+</head>
+<body>
+  <h2>Box of Div-Container</h2>
+  <div class="main"> 
+    <div class="content"> 
+      <div class="box"><div class="hello">Hello Developer..</div>
+    </div>
+  </div>
+</body>
+</html>
