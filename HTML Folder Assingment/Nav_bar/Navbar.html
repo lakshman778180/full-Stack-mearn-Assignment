@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nav-bar</title>
+  <style>
+body{
+  background-color: chocolate;
+}
+nav a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding-left: 10px;
+  font-weight: 600;
+}
+nav a:hover{
+  color: black;
+}
+nav a.active{
+  background-color: blue;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px double black;
+}
+
+.content{
+  background-color:yellow;
+  margin: 100px;
+  border: 2px solid black;
+  height: 400px;
+  width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  
+}
+.text{
+  height: 250px;
+  width: 250px;
+  padding: 20px;
+  background-color: cyan;
+  margin: 20px;
+}
+.click{
+  margin:100px;
+  background-color: rgb(231, 19, 19);
+  border-radius: 10px;
+  padding: 10px;
+}
+.click:hover{
+  background-color: black;
+  color: white;
+}
+@media (max-width: 760px){
+  .content{
+    width: 200px;
+    height: 200px;
+padding: 10px;
+margin: 40px;
+  }
+  .text{
+    width: 100px;
+    height: 100px;
+    padding-left: 15px;
+    overflow: scroll;
+    border-radius: 7px;
+    margin: 15px;
+  }
+  .click{
+    margin: 40px;
+    padding: 7px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="active">Music</a>
+  <a href="#" >Section</a>
+  <a href="#">Listen</a>
+  <a href="#">Visit</a>
+</nav>
+<center>
+  <div class="content">
+<p style="color: blue; font-size: 22px; text-shadow: 1px 1px rgb(152, 142, 142);">What is full-stack</p>
+    <div class="text">A full-stack web developer is a person who can develop both client and server software
+      In addition to mastering HTML and CSS, he/she also knows how to:
+      Program a browser (e.g. using JavaScript, jQuery, Angular, or Vue)
+      Program a server (e.g. using PHP, ASP, Python, or Node)
+      Program a database (e.g. using SQL, SQLite, or MongoDB)
+    </div>
+    <span class="click">Click-me</span>
+      </div>
+</center>
+
+</body>
+</html>
