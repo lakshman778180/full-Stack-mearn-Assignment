@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e3f2fd;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #1565c0;
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+        .header h1 {
+            color: white;
+        }
+        .header h4, .header h2 {
+            color: #ffeb3b;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #f1f8e9;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #81c784;
+            color: white;
+        }
+        .btn {
+            background-color: #1565c0;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Lakshman Public School</h1>
+            <h4>NH-30, Rewa-Satna Road, Bela, Satna M.P. - 485 115</h4>
+            <h4>CBSE Affiliation No. 1030591, School Code: 50566</h4>
+            <h2>Application for Admission</h2>
+            <h4>Session 2025-26</h4>
+        </div>
+        <form>
+            <div class="form-group">
+                <label>Student's Photo *</label>
+                <input type="file">
+            </div>
+            <div class="form-group">
+                <label>Father's Photo *</label>
+                <input type="file">
+            </div>
+            <div class="form-group">
+                <label>Mother's Photo *</label>
+                <input type="file">
+            </div>
+            <div class="form-group">
+                <label>Local Guardian's Photo *</label>
+                <input type="file">
+            </div>
+            <div class="form-group">
+                <label>Class *</label>
+                <input type="text" placeholder="Enter Your Class" required>
+            </div>
+            <div class="form-group">
+                <label>Name *</label>
+                <input type="text" placeholder="Enter Your Name" required>
+            </div>
+            <div class="form-group">
+                <label>Nationality *</label>
+                <input type="text" value="Indian" required>
+            </div>
+            <div class="form-group">
+                <label>Date of Birth *</label>
+                <input type="date" required>
+            </div>
+            <div class="form-group">
+                <label>Gender *</label>
+                <select required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="transgender">Transgender</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Aadhaar Card Number *</label>
+                <input type="text" maxlength="12" pattern="\d{12}" placeholder="1234 5678 9123" required>
+            </div>
+            <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" maxlength="10" pattern="\d{10}" placeholder="7781804958" required>
+            </div>
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Maximum Marks</th>
+                    <th>Marks Obtained</th>
+                    <th>Percentage</th>
+                    <th>Remarks</th>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
