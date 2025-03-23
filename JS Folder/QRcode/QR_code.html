@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        #qr-reader {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        #qr-reader-results {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        
+        .button-container {
+            margin-top: 20px;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        #targetURL {
+            font-weight: bold;
+            color: #0366d6;
+        }
+    </style>
+</head>
+<body>
+    <h1>QR Code Scanner</h1>
+    <p>Scan a QR code to visit the GitHub User Finder page</p>
+    <p>Target URL: <span id="targetURL">https://lakshman778180.github.io/full-Stack-mearn-Assignment/JS%20Folder/Githubfinder/Userfind.html</span></p>
+    
+    <div id="qr-reader"></div>
+    <div id="qr-reader-results">
+        <p>Scanned QR Code:</p>
+        <p id="result"></p>
+        <div id="action-buttons">
+            <button id="open-url">Open URL</button>
+            <button id="scan-again">Scan Again</button>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <button id="start-button">Start Scanner</button>
+    </div>
+    
+    <script>
+        const targetURL = "https://lakshman778180.github.io/full-Stack-mearn-Assignment/JS%20Folder/Githubfinder/Userfind.html";
+        let html5QrCode;
+        
+        document.getElementById('start-button').addEventListener('click', function() {
+            startScanner();
+            this.style.display = 'none';
+        });
+        
+        function startScanner() {
+            html5QrCode = new Html5Qrcode("qr-reader");
+            const qrConfig = { fps: 10, qrbox: { width: 250, height: 250 } };
+            
+            html5QrCode.start(
+                { facingMode: "environment" }, 
+                qrConfig, 
+                onScanSuccess, 
+                onScanFailure
+            );
+        }
+        
+        function onScanSuccess(decodedText, decodedResult) {
+            // Stop scanner
+            html5QrCode.stop();
+            
+            // Display result
+            document.getElementById('result').textContent = decodedText;
+            document.getElementById('qr-reader-results').style.display = 'block';
+            
+            // Check if scanned URL matches target URL
+            if (decodedText === targetURL) {
+                document.getElementById('result').className = 'success';
+                document.getElementById('result').textContent += ' (Matches target URL)';
+            } else {
+                document.getElementById('result').className = '';
+            }
+        }
+        
+        function onScanFailure(error) {
+            // Handle scan failure, usually no need to notify the user
+            console.warn(`QR scan failed: ${error}`);
+        }
+        
+        document.getElementById('open-url').addEventListener('click', function() {
+            const scannedURL = document.getElementById('result').textContent.split(' ')[0];
+            window.open(scannedURL, '_blank');
+        });
+        
+        document.getElementById('scan-again').addEventListener('click', function() {
+            document.getElementById('qr-reader-results').style.display = 'none';
+            startScanner();
+        });
+    </script>
+</body>
+</html>
