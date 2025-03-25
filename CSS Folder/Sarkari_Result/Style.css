@@ -177,6 +177,7 @@ footer {
     padding: 10px;
     margin: 5px 0;
     font-size: 18px;
+    border: none;
   }
   .content {
     flex-direction: column;
