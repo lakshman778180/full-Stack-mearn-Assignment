@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task 16</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f2027;
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      color: #fff;
+    }
+
+    h2 {
+      color: #00e0ff;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      background: #1c1c1c;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      border: 2px solid #00e0ff;
+      box-shadow: 0 0 20px rgba(0,224,255,0.2);
+    }
+
+    label {
+      display: block;
+      margin: 8px 0 4px;
+    }
+
+    input, button, select {
+      padding: 10px;
+      margin: 5px 0 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      background-color: #00e0ff;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #00c6d1;
+    }
+
+    #image {
+      width: 200px;
+      height: 200px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: 3px solid #00e0ff;
+    }
+
+    #displayData, #dateTime {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #111;
+      border-left: 4px solid #00e0ff;
+      border-radius: 10px;
+    }
+
+    #text {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 1: Form + Show Info -->
+  <div class="section">
+    <h2>Task 1: Show Basic Info</h2>
+    <form id="infoForm">
+      <label>Name:</label>
+      <input type="text" id="name" />
+
+      <label>Age:</label>
+      <input type="number" id="age" />
+
+      <label>Email:</label>
+      <input type="email" id="email" />
+
+      <button type="button" onclick="showInfo()">Show Info</button>
+    </form>
+
+    <div id="displayData"></div>
+  </div>
+
+  <!-- Task 2: Change Image -->
+  <div class="section">
+    <h2>Task 2: Change Image</h2>
+    <img id="image" src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500=Image+1" alt="Image" />
+    <br>
+    <button onclick="changeImage()">Change Image</button>
+  </div>
+
+  <!-- Task 3: Font Size Control -->
+  <div class="section">
+    <h2>Task 3: Font Size Control</h2>
+    <div id="text">This is some sample text.</div>
+    <br>
+    <button onclick="changeFontSize(2)">Increase</button>
+    <button onclick="changeFontSize(-2)">Decrease</button>
+  </div>
+
+  <!-- Task 4: Show Date & Time -->
+  <div class="section">
+    <h2>Task 4: Show Date & Time</h2>
+    <button onclick="showDateTime()">Get Current Date & Time</button>
+    <div id="dateTime"></div>
+  </div>
+
+  <script>
+    // Task 1: Show Form Data
+    function showInfo() {
+      const name = document.getElementById("name").value;
+      const age = document.getElementById("age").value;
+      const email = document.getElementById("email").value;
+
+      document.getElementById("displayData").innerHTML =
+        `<strong>Name:</strong> ${name}<br>
+         <strong>Age:</strong> ${age}<br>
+         <strong>Email:</strong> ${email}`;
+    }
+
+    // Task 2: Change Image
+    let imgToggle = true;
+    function changeImage() {
+      const img = document.getElementById("image");
+      img.src = imgToggle
+        ? "https://images.pexels.com/photos/1207875/pexels-photo-1207875.jpeg?cs=srgb&dl=pexels-andre-mouton-1207875.jpg&fm=jpg=Image+2"
+        : "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500=Image+1";
+      imgToggle = !imgToggle;
+    }
+
+    // Task 3: Font Size Change
+    let currentFontSize = 16;
+    function changeFontSize(change) {
+      currentFontSize += change;
+      document.getElementById("text").style.fontSize = currentFontSize + "px";
+    }
+
+    // Task 4: Show Date & Time
+    function showDateTime() {
+      const now = new Date();
+      document.getElementById("dateTime").innerHTML = 
+        `<strong>${now.toLocaleString()}</strong>`;
+    }
+  </script>
+</body>
+</html>
