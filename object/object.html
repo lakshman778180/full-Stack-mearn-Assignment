@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>object</title>
+</head>
+<body>
+  <script>
+    const person = {
+  firstName: "Lakshman jha",
+  lastName: "",
+  age: 50,
+  eyeColor: "blue",
+  fullName: function(){
+    return this.person.firstName + "" + this.person.lastName;
+  }
+};
+console.log(person.firstName);
+document.write( person.firstName + "<br>");
+document.write( person.age + "<br>");
+console.log(person["age"]);
+document.write( person["blue"] + "<br>");
+console.log(fullName());
+
+  </script>
+</body>
+</html>

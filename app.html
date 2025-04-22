@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript-DOM:1</title>
+</head>
+<body >
+  <h1 style="text-align: center; color: blue;">JavaScript DOM</h1>
+  
+  <p id="para">Change the text background color font size text align</p>
+  <div id="container"></div>
+  <button onclick="clickfunc()" style="border: 2px solid red; background-color: cadetblue; padding: 10px; text-align: center; border-radius: 5px;  font-size: 15px;" >Click change </button>
+  <script>
+function clickfunc(){
+    document.getElementById("para").innerHTML = "Lakshman jha !";
+
+    document.getElementById("para").style.color = "red";
+    document.getElementById("para").style.fontSize = "30px";
+    document.getElementById("para").style.fontWeight = "bold";
+    document.getElementById("para").style.textAlign = "center";
+    document.getElementById("para").style.backgroundColor = "black";
+    document.getElementById("para").style.padding = "20px";
+    document.getElementById("para").style.borderRadius = "10px";
+    const heading = document.createElement("p");
+    const texNode = document.createTextNode("Hello bachho Kya hal Chal Padhai ho rahi hai!");
+  heading.style.color ="white";
+  heading.style.backgroundColor="brown";
+    heading.appendChild(texNode);
+       // document.body.appendChild(heading);
+    document.getElementById("container").appendChild(heading);
+}
+  </script>
+</body>
+</html>

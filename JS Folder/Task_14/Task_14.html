@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task 14 Output</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e9f0f5;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+    }
+
+    .task-box {
+      background: #ffffff;
+      border: 2px solid #007BFF;
+      padding: 20px 25px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .task-box:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #007BFF;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .result {
+      font-size: 16px;
+      color: #2d3436;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <h1 style="text-align: center; padding: 5px;">JavaScript Tasks Output</h1>
+    <div class="task-box" id="task1"></div>
+    <div class="task-box" id="task2"></div>
+    <div class="task-box" id="task3"></div>
+    <div class="task-box" id="task4"></div>
+    <div class="task-box" id="task5"></div>
+  </div>
+
+  <script>
+    // Task 1
+    function filterNegative(arr) {
+      return arr.filter(n => n >= 0);
+    }
+    let t1 = filterNegative([-4, 0, 7, -8, 3]);
+    document.getElementById("task1").innerHTML = `
+      <h2>Task 1</h2>
+      <div class="result">Filtered: ${t1.join(", ")}</div>`;
+
+    // Task 2
+    function diffFrom13(n) {
+      return n > 13 ? 2 * Math.abs(n - 13) : 13 - n;
+    }
+    let t2 = diffFrom13(20);
+    document.getElementById("task2").innerHTML = `
+      <h2>Task 2</h2>
+      <div class="result">Result: ${t2}</div>`;
+
+    // Task 3
+    function fibonacci(n) {
+      let fib = [0, 1];
+      for (let i = 2; i < n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+      }
+      return fib.slice(0, n);
+    }
+    let t3 = fibonacci(10);
+    document.getElementById("task3").innerHTML = `
+      <h2>Task 3</h2>
+      <div class="result">Fibonacci (10): ${t3.join(", ")}</div>`;
+
+    // Task 4
+    function sumMultiples(limit) {
+      let sum = 0;
+      for (let i = 1; i < limit; i++) {
+        if (i % 3 === 0 || i % 5 === 0) sum += i;
+      }
+      return sum;
+    }
+    let t4 = sumMultiples(1000);
+    document.getElementById("task4").innerHTML = `
+      <h2>Task 4</h2>
+      <div class="result">Sum: ${t4}</div>`;
+
+    // Task 5
+    let cube = new Function("n", "return n * n * n;");
+    let t5 = cube(5);
+    document.getElementById("task5").innerHTML = `
+      <h2>Task 5</h2>
+      <div class="result">Cube of 5: ${t5}</div>`;
+  </script>
+</body>
+</html>
+
+
