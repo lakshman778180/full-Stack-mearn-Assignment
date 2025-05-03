@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Exception Handling</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #d0e7ff, #fdfbfb);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #1e3a8a;
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+
+    .card {
+      background: #fff;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      padding: 20px 25px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      margin-bottom: 20px;
+      transition: transform 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .output {
+      background-color: #f3f4f6;
+      padding: 12px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.95rem;
+      white-space: pre-wrap;
+      color: #374151;
+    }
+
+    @media (max-width: 550px) {
+      .card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Exception Handling in JS(task-17)</h1>
+
+  <div class="card">
+    <h2>1. Undeclared Variable</h2>
+    <div class="output" id="output1"></div>
+  </div>
+
+  <div class="card">
+    <h2>2. Divide by Zero</h2>
+    <div class="output" id="output2"></div>
+  </div>
+
+  <div class="card">
+    <h2>3. Out of Bound Index</h2>
+    <div class="output" id="output3"></div>
+  </div>
+
+  <div class="card">
+    <h2>4. Try-Catch-Finally</h2>
+    <div class="output" id="output4"></div>
+  </div>
+
+  <script>
+    // Task 1: Undeclared variable error
+    try {
+      let result = notDeclared + 10;
+    } catch (error) {
+      document.getElementById("output1").textContent = "Error: " + error.message;
+    }
+
+    // Task 2: Divide by Zero error
+    function divide(a, b) {
+      if (b === 0) {
+        throw new Error("Divide by Zero Error");
+      }
+      return a / b;
+    }
+
+    try {
+      let result = divide(10, 0);
+      document.getElementById("output2").textContent = "Result: " + result;
+    } catch (error) {
+      document.getElementById("output2").textContent = "Error: " + error.message;
+    }
+
+    // Task 3: Out of bound error
+    function getElement(arr, index) {
+      if (index < 0 || index >= arr.length) {
+        throw new Error("Out of Bound Error");
+      }
+      return arr[index];
+    }
+
+    try {
+      let arr = [1, 2, 3];
+      let element = getElement(arr, 5);
+      document.getElementById("output3").textContent = "Element: " + element;
+    } catch (error) {
+      document.getElementById("output3").textContent = "Error: " + error.message;
+    }
+
+    // Task 4: Try-catch-finally
+    try {
+      throw new Error("Manual Error Triggered");
+    } catch (error) {
+      document.getElementById("output4").textContent = "Caught: " + error.message;
+    } finally {
+      document.getElementById("output4").textContent += "\nFinally block always runs.";
+    }
+  </script>
+
+</body>
+</html>
+
