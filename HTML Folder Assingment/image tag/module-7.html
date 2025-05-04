@@ -3,16 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> My Gallery</title>
+  <title>My Gallery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f5;
+      color: #333;
+    }
+
+    article {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .gallery img {
+      width: 220px;
+      height: auto;
+      border-radius: 10px;
+      border: 4px solid #e0e0e0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+      border-color: #3498db;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #2980b9;
+    }
+  </style>
 </head>
 <body>
-  <img src="./../assets/image2.jpg" alt="image-2" title="Nice Place">
-  <img src="./../assets/image3.jpg" alt="image-3" title="Nice Place">
-  <img src="./../assets/image5.jpg" alt="image-5" title="Nice Place">
-  <img src="./../assets/image6.jpg" alt="image-6" title="Nice Place">
-  <img src="./../assets/image7.jpg" alt="image-7" title="Nice Place">
-  <img src="./../assets/image8.jpg" alt="image-8" title="Nice Place">
-  <img src="./../assets/image9.jpg" alt="image-9" title="Nice Place">
-  <img src="./../assets/image2.jpg" alt="image-2" title="Nice home">
+
+  <article>
+    <h1>Explore My Travel Gallery</h1>
+    <p>
+      Traveling has always been a passion of mine. Every place I visit adds a new layer to my memories.
+      This gallery showcases some of the most breathtaking moments I’ve captured during my adventures.
+      From the snow-kissed mountains to the calmness of a lakeside evening, each image tells a story of its own.
+    </p>
+
+    <p>
+      The <span class="highlight">serene mountain</span> views remind me of early morning hikes,
+      where the cold air is crisp and the scenery is untouched. The <span class="highlight">peaceful lake</span>
+      image captures the stillness that makes you forget the chaos of the world.
+      Nature has a beautiful way of grounding us.
+    </p>
+
+    <div class="gallery">
+      <img src="./../assets/image2.jpg" alt="Mountain View" title="Serene Mountain">
+      <img src="./../assets/image3.jpg" alt="Lake View" title="Peaceful Lake">
+      <img src="./../assets/image5.jpg" alt="Forest Path" title="Lush Forest Path">
+      <img src="./../assets/image6.jpg" alt="City Lights" title="Night City Vibes">
+      <img src="./../assets/image7.jpg" alt="Beach" title="Sunny Beach">
+      <img src="./../assets/image8.jpg" alt="Historic Site" title="Ancient Wonders">
+    </div>
+
+    <p>
+      Walking through the <span class="highlight">forest paths</span>, I was surrounded by greenery, bird songs,
+      and a deep sense of connection with the Earth. The <span class="highlight">city lights</span> brought out
+      a contrasting vibe—buzzing, alive, and filled with stories of people living their dreams.
+    </p>
+
+    <p>
+      Lastly, the <span class="highlight">beach sunsets</span> and <span class="highlight">historical ruins</span>
+      were moments frozen in time. Whether it was listening to the waves crashing or imagining the past glory
+      of ancient civilizations, each destination left a lasting impression on me.
+    </p>
+
+    <p>
+      This gallery is not just a collection of pictures; it’s a journey. A journey through places, emotions, and memories.
+      I hope it inspires you to pack your bags, pick up your camera, and start your own adventure.
+    </p>
+  </article>
+
 </body>
 </html>

@@ -3,98 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nav-bar</title>
+  <title>4 Sections Webpage</title>
   <style>
-body{
-  background-color: chocolate;
-}
-nav a{
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  padding-left: 10px;
-  font-weight: 600;
-}
-nav a:hover{
-  color: black;
-}
-nav a.active{
-  background-color: blue;
-  padding: 5px;
-  border-radius: 10px;
-  border: 1px double black;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.content{
-  background-color:yellow;
-  margin: 100px;
-  border: 2px solid black;
-  height: 400px;
-  width: 400px;
-  padding: 20px;
-  border-radius: 15px;
-  
-}
-.text{
-  height: 250px;
-  width: 250px;
-  padding: 20px;
-  background-color: cyan;
-  margin: 20px;
-}
-.click{
-  margin:100px;
-  background-color: rgb(231, 19, 19);
-  border-radius: 10px;
-  padding: 10px;
-}
-.click:hover{
-  background-color: black;
-  color: white;
-}
-@media (max-width: 760px){
-  .content{
-    width: 200px;
-    height: 200px;
-padding: 10px;
-margin: 40px;
-  }
-  .text{
-    width: 100px;
-    height: 100px;
-    padding-left: 15px;
-    overflow: scroll;
-    border-radius: 7px;
-    margin: 15px;
-  }
-  .click{
-    margin: 40px;
-    padding: 7px;
-  }
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f7f1e3, #dff9fb);
+      padding: 40px 20px;
+    }
 
+    .section-row {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background-color: white;
+      border-radius: 15px;
+      width: 230px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .box img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+
+    .box h3 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px #f1c40f;
+    }
+
+    .box p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .section-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .box {
+        width: 80%;
+      }
+    }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="#" class="active">Music</a>
-  <a href="#" >Section</a>
-  <a href="#">Listen</a>
-  <a href="#">Visit</a>
-</nav>
-<center>
-  <div class="content">
-<p style="color: blue; font-size: 22px; text-shadow: 1px 1px rgb(152, 142, 142);">What is full-stack</p>
-    <div class="text">A full-stack web developer is a person who can develop both client and server software
-      In addition to mastering HTML and CSS, he/she also knows how to:
-      Program a browser (e.g. using JavaScript, jQuery, Angular, or Vue)
-      Program a server (e.g. using PHP, ASP, Python, or Node)
-      Program a database (e.g. using SQL, SQLite, or MongoDB)
+  <section class="section-row">
+    <!-- Home -->
+    <div class="box">
+      <img src="https://img.icons8.com/fluency/96/home.png" alt="Home Icon">
+      <h3>Home</h3>
+      <p>Welcome to our website! Explore the latest updates, features, and news right from our homepage.</p>
     </div>
-    <span class="click">Click-me</span>
-      </div>
-</center>
+
+    <!-- About -->
+    <div class="box">
+      <img src="https://img.icons8.com/color/96/about.png" alt="About Icon">
+      <h3>About</h3>
+      <p>Learn more about our mission, values, team, and the journey that brought us here.</p>
+    </div>
+
+    <!-- Gallery -->
+    <div class="box">
+      <img src="https://img.icons8.com/color/96/picture.png" alt="Gallery Icon">
+      <h3>Gallery</h3>
+      <p>Browse our collection of beautiful images and project snapshots. Updated regularly.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="box">
+      <img src="https://img.icons8.com/color/96/contacts.png" alt="Contact Icon">
+      <h3>Contact</h3>
+      <p>Have questions or feedback? Reach out through email, social media, or our contact form.</p>
+    </div>
+  </section>
 
 </body>
 </html>
+
+
