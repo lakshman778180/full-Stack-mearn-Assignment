@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Task Overview(18)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f2f5fa;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5em;
+      color: #333;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 20px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+  width: 150px;      /* Increased from 100px */
+  height: 150px;     /* Increased from 100px */
+  object-fit: contain;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+    .card h2 {
+      color: #007bff;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95em;
+      line-height: 1.5em;
+    }
+
+    @media (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Library Task Overview</h1>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="create data.png" alt="Create Database">
+      <h2>⚠️ Create Database</h2>
+      <p>The <strong>library</strong> database has been created. Ready for table creation.</p>
+    </div>
+
+    <div class="card">
+      <img src="Drop li.png" alt="Database Dropped">
+      <h2>⚠️ Database Dropped</h2>
+      <p>The entire <strong>library</strong> database has been dropped. No further tables exist under this schema.</p>
+    </div>
+
+    <div class="card">
+      <img src="createtb.png" alt="Create Table">
+      <h2>📘 Book Table Created</h2>
+      <p>The <strong>book_records</strong> table has columns for Library No, Book Name, Author, Edition, and Price.</p>
+    </div>
+
+    <div class="card">
+      <img src="Screenshot 2025-05-16 074827.png" alt="Table Dropped">
+      <h2>🗑️ Table Dropped</h2>
+      <p>The table <strong>book_records</strong> has been successfully deleted from the <strong>library</strong> database.</p>
+    </div>
+  </div>
+
+</body>
+</html>
