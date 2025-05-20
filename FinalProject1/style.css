@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: wheat;
+}
+
+/* Message Style */
+.msg {
+    color: red;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Form Wrapper */
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Form Box */
+.form form {
+    background-color: whitesmoke;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 420px;
+}
+
+/* Form Header */
+.form form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 28px;
+    color: #4b2c64;
+}
+
+/* Input and Select */
+.form form input,
+.form form select {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.form form input:focus,
+.form form select:focus {
+    border-color: #783595;
+}
+
+/* Button */
+.form form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #783595;
+    color: #ffffff;
+    font-size: 17px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form form button:hover {
+    background-color: #5e2b7e;
+}
+
+/* Paragraph + link */
+.form form p {
+    font-size: 14px;
+    margin-top: 1rem;
+}
+
+.form form a {
+    color: #783595;
+    font-weight: 600;
+}
+
+/* User Page */
+.user-page {
+    text-align: center;
+    margin-top: 15rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.user_page p {
+    font-size: 18px;
+    margin-top: 2rem;
+}
+
+.user-page button {
+    margin-top: 15px;
+    color: white;
+    background-color: #783595;
+    padding: 10px 25px;
+    border: none;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-page button:hover {
+    background-color: #5e2b7e;
+}

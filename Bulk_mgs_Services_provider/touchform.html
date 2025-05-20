@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BulkSender Pro - Contact Form</title>
+    <style>
+        /* General Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Contact Section Styling */
+        .contact {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #333333;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #333333;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #555555;
+        }
+
+        /* Single row layout */
+        .contact-container {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            gap: 30px;
+        }
+
+        /* Form Styling */
+        .contact-form-container {
+            flex: 1;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 20px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333333;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            background: #ffffff;
+            color: #333333;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4d84e2;
+            box-shadow: 0 0 0 3px rgba(77, 132, 226, 0.1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #adb5bd;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4d84e2 0%, #3561b5 100%);
+            color: white;
+            width: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #3975da 0%, #2d52a0 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:active {
+            transform: translateY(-1px);
+        }
+
+        /* Map Styling */
+        .map-container {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            min-height: 400px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dee2e6;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            min-height: 600px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .map-container {
+                height: 400px;
+                min-height: auto;
+            }
+            
+            .map-container iframe {
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Social Media Section */
+        .social-media-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: 8px;
+        }
+
+        .social-media-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #333333;
+        }
+
+        .social-media-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #f8f9fa;
+            color: #4d84e2;
+            font-size: 1.5rem;
+            transition: transform 0.3s, background 0.3s;
+            text-decoration: none;
+            border: 1px solid #dee2e6;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            background: #4d84e2;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Get in Touch</h2>
+            <p class="section-subtitle fade-in">We'd love to hear from you. Whether you have a question or feedback, feel free to reach out!</p>
+            
+            <div class="contact-container">
+                <!-- Form Section -->
+                <div class="contact-form-container fade-in">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company" placeholder="Your Company">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                            </div>
+                            <div class="form-group">
+                                <label for="inquiry">Inquiry Type</label>
+                                <select id="inquiry" name="inquiry">
+                                    <option value="">Select an option</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="sales">Sales Question</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="pricing">Pricing Information</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Subscribe to our newsletter for updates and special offers</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+
+                    <!-- Social Media Section -->
+                    <div class="social-media-section fade-in">
+                        <h3 class="social-media-title">Connect With Us</h3>
+                        <div class="social-media-icons">
+                            <a href="#" class="social-icon">f</a>
+                            <a href="#" class="social-icon">t</a>
+                            <a href="#" class="social-icon">in</a>
+                            <a href="#" class="social-icon">ig</a>
+                            <a href="#" class="social-icon">yt</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map Section -->
+                <div class="map-container fade-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30596552044!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1621530061599!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Intersection Observer for fade-in elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form validation and submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simple form validation
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                if (!name || !email || !message) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+                
+                // Here you would typically send the form data to your server
+                // For demo purposes, we'll just show a success message
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    alert('Thank you! Your message has been sent successfully.');
+                    contactForm.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            });
+        }
+    </script>
+</body>
+</html>
