@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+ <link rel="stylesheet" href="dtyle.css">
+</head>
+<body>
+  <div class="container">
+ <div class="todo-app">
+  <h2>Todo App
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/GNOME_Todo_icon_2019.svg/1200px-GNOME_Todo_icon_2019.svg.png" alt="">
+  </h2>
+  <div class="row">
+  <input type="text" id="input-box" placeholder="Add a new todo...">
+  <button onclick="addTask()">Add</button>
+  </div>
+  <ul id="todo-list">
+    <!-- <li class="checked">task-1</li>
+    <li>task-1</li>
+    <li>task-1</li> -->
+  </ul>
+ </div>
+  </div>
+  <script>
+    const inputBox = document.getElementById('input-box');
+    const listContainer = document.getElementById('todo-list');
+    function addTask(){
+      if(inputBox.value === '') {
+        alert('Please enter a task!');
+      } else {
+        let li = document.createElement('li');
+        li.textContent = inputBox.value;
+        listContainer.appendChild(li);
+        let span = document.createElement('span');
+        span.textContent = '\u00d7'; // Unicode for the multiplication sign
+        li.appendChild(span);
+        saveData();
+      }
+      inputBox.value = '';
+    }
+    listContainer.addEventListener('click', function(e) {
+      if (e.target.tagName === 'LI') {
+        e.target.classList.toggle('checked');
+        saveData();
+      } else if (e.target.tagName === 'SPAN') {
+        e.target.parentElement.remove();
+        saveData();
+      }
+    }, false);
+    function saveData(){
+      localStorage.setItem('data',listContainer.innerHTML);
+    }
+    function showTask(){
+      listContainer.innerHTML = localStorage.getItem('data');
+    }
+    showTask();
+  </script>
+</body>
+</html>
