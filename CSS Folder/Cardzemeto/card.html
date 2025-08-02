@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .container {
+      width: 260px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      border: 15px solid  #fff ;
+      margin-left: 40px;
+      margin-top: 10px;
+    }
+
+    .imag img {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px 10px 0 0;
+      display: block;
+    }
+
+    .food, .location {
+      padding: 10px;
+      position: relative;
+    }
+
+    .food_name, .location_name {
+      display: inline-block;
+      font-size: 14px;
+      color: #817e7e;
+    }
+
+    .food_price, .distance {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 14px;
+    }
+    .distance{
+      background-color: green;
+      border-radius: 10px;
+      padding: 4px 10px;
+      color: white;
+    }
+    .container:hover{
+    
+      transition: transform 0.3s ease;
+      border-color: rgb(220, 215, 215);
+      background-color: white;
+     
+    }
+    .off {
+      position: absolute;
+      left: 10px;
+      bottom: 90px;
+      background-color: rgba(141, 36, 36, 0.6);
+      color: white;
+      font-size: 30px;
+    }
+    .off:hover{
+      background-color: rgba(199, 27, 27, 0.8);
+      
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .box{
+      display: inline-block;
+    }
+    
+    .first{
+      margin-left: 100px;
+    }
+    .brand h1 {
+      font-size: 30px;
+      color: #d6280a;
+      margin: 0;
+      font-weight: 700;
+      margin-right: 200px;
+    }
+    .search_input {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      position: relative;
+      bottom: 5px;
+    }
+    .search_button {
+      padding: 10px 20px;
+      background-color: #d6280a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 400px;
+      position: relative;
+      bottom: 5px;
+      
+    }
+    .search_button:hover {
+      background-color: #a11c08;
+    }
+    .login button, .signup button {
+      padding: 10px 20px;
+      background-color: #d6280a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+<!-- header section -->
+ <header>
+  <div class="head">
+    <div class="first">
+      <div class="brand box">
+        <h1>Zomato</h1>
+      </div>
+      <div class="search box">
+        <input type="text " placeholder="Search for food, restaurants, etc." class="search_input box">
+        <button type="submit " class="search_button box">Search</button>
+      </div>
+      <div class="login box">
+        <button>Login</button>
+    </div>
+      <div class="signup box">
+        <button>Sign Up</button>
+      </div>
+    </div>
+    <div class="second"></div>
+
+  </div>
+ </header>
+
+  <div class="container">
+    <div class="imag">
+      <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Card Image">
+      <p class="off">Flat 20% OFF</p>
+    </div>
+
+    <div class="food">
+      <div class="food_name">Indian food kjahnkx</div>
+      <div class="food_price">₹1234</div>
+    </div>
+
+    <div class="location">
+      <div class="location_name">Model class CP</div>
+      <div class="distance">2.5 km</div>
+    </div>
+  </div>
+   <div class="container">
+    <div class="imag">
+      <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Card Image">
+    </div>
+
+    <div class="food">
+      <div class="food_name">Indian food kjahnkx</div>
+      <div class="food_price">₹1234</div>
+    </div>
+
+    <div class="location">
+      <div class="location_name">Model class CP</div>
+      <div class="distance">2.5 km</div>
+    </div>
+  </div>
+   <div class="container">
+    <div class="imag">
+      <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Card Image">
+    </div>
+
+    <div class="food">
+      <div class="food_name">Indian food kjahnkx</div>
+      <div class="food_price">₹1234</div>
+    </div>
+
+    <div class="location">
+      <div class="location_name">Model class CP</div>
+      <div class="distance">2.5 km</div>
+    </div>
+  </div>
+   <div class="container">
+    <div class="imag">
+      <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Card Image">
+    </div>
+
+    <div class="food">
+      <div class="food_name">Indian food kjahnkx</div>
+      <div class="food_price">₹1234</div>
+    </div>
+
+    <div class="location">
+      <div class="location_name">Model class CP</div>
+      <div class="distance">2.5 km</div>
+    </div>
+  </div>
+   <div class="container">
+    <div class="imag">
+      <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Card Image">
+    </div>
+
+    <div class="food">
+      <div class="food_name">Indian food kjahnkx</div>
+      <div class="food_price">₹1234</div>
+    </div>
+
+    <div class="location">
+      <div class="location_name">Model class CP</div>
+      <div class="distance">2.5 km</div>
+    </div>
+  </div>
+   <div class="container">
+    <div class="imag">
+      <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Card Image">
+    </div>
+
+    <div class="food">
+      <div class="food_name">Indian food kjahnkx</div>
+      <div class="food_price">₹1234</div>
+    </div>
+
+    <div class="location">
+      <div class="location_name">Model class CP</div>
+      <div class="distance">2.5 km</div>
+    </div>
+  </div>
+   <div class="container">
+    <div class="imag">
+      <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Card Image">
+    </div>
+
+    <div class="food">
+      <div class="food_name">Indian food kjahnkx</div>
+      <div class="food_price">₹1234</div>
+    </div>
+
+    <div class="location">
+      <div class="location_name">Model class CP</div>
+      <div class="distance">2.5 km</div>
+    </div>
+  </div>
+   <div class="container">
+    <div class="imag">
+      <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Card Image">
+    </div>
+
+    <div class="food">
+      <div class="food_name">Indian food kjahnkx</div>
+      <div class="food_price">₹1234</div>
+    </div>
+
+    <div class="location">
+      <div class="location_name">Model class CP</div>
+      <div class="distance">2.5 km</div>
+    </div>
+  </div>
+   <div class="container">
+    <div class="imag">
+      <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Card Image">
+    </div>
+
+    <div class="food">
+      <div class="food_name">Indian food kjahnkx</div>
+      <div class="food_price">₹1234</div>
+    </div>
+
+    <div class="location">
+      <div class="location_name">Model class CP</div>
+      <div class="distance">2.5 km</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="imag">
+      <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="Card Image">
+    </div>
+
+    <div class="food">
+      <div class="food_name">Indian food kjahnkx</div>
+      <div class="food_price">₹1234</div>
+    </div>
+
+    <div class="location">
+      <div class="location_name">Model class CP</div>
+      <div class="distance">2.5 km</div>
+    </div>
+  </div>
+</body>
+</html>
