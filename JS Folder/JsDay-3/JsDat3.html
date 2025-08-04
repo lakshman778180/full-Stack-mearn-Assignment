@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App - HTML CSS JS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>Web Tech Quiz</h1>
+      <div class="quiz">
+        <h2 id="question">Question will be here</h2>
+          <div id="timer"></div>
+        <div id="answer-buttons"></div>
+        <button id="next-btn" class="next-btn">Next</button>
+      </div>
+    </div>
+
+    <script>
+      const questions = [
+        // HTML Questions
+        {
+          question: "What does the 'defer' attribute in script tag do?",
+          answers: [
+            { text: "Used only in CSS", correct: false },
+            { text: "Executes script immediately", correct: false },
+            {
+              text: "Delays script execution until HTML is parsed",
+              correct: true,
+            },
+
+            { text: "Delays loading of HTML", correct: false },
+          ],
+        },
+        {
+          question: "Which HTML tag is used to embed a webpage inside another?",
+          answers: [
+            { text: "<object>", correct: false },
+
+            { text: "<embed>", correct: false },
+
+            { text: "<frame>", correct: false },
+            { text: "<iframe>", correct: true },
+          ],
+        },
+        {
+          question: "Which HTML5 element defines navigation links?",
+          answers: [
+            { text: "<section>", correct: false },
+            { text: "<nav>", correct: true },
+
+            { text: "<article>", correct: false },
+            { text: "<footer>", correct: false },
+          ],
+        },
+
+        // CSS Questions
+        {
+          question: "What does the 'z-index' property in CSS control?",
+          answers: [
+            { text: "Zoom level", correct: false },
+
+            { text: "Stacking order of elements", correct: true },
+            { text: "Text-indent", correct: false },
+            { text: "Line spacing", correct: false },
+          ],
+        },
+        {
+          question:
+            "What is the specificity of a selector '#header .nav li.active'?",
+          answers: [
+            { text: "0-2-1", correct: false },
+            { text: "1-1-2", correct: true },
+            { text: "1-0-3", correct: false },
+            { text: "0-1-3", correct: false },
+          ],
+        },
+        {
+          question: "Which unit is relative to the viewport height?",
+          answers: [
+            { text: "em", correct: false },
+            { text: "rem", correct: false },
+            { text: "vh", correct: true },
+            { text: "vw", correct: false },
+          ],
+        },
+
+        // JavaScript Questions
+        {
+          question: "What will 'typeof NaN' return in JavaScript?",
+          answers: [
+            { text: "'NaN'", correct: false },
+            { text: "'number'", correct: true },
+            { text: "'undefined'", correct: false },
+            { text: "'object'", correct: false },
+          ],
+        },
+        {
+          question:
+            "Which method is used to parse JSON string into JavaScript object?",
+          answers: [
+            { text: "JSON.stringify()", correct: false },
+            { text: "parseJSON()", correct: false },
+            { text: "JSON.parse()", correct: true },
+            { text: "JSON.toObject()", correct: false },
+          ],
+        },
+        {
+          question: "What will this return: '[] + {}'?",
+          answers: [
+            { text: "'{}[]'", correct: false },
+            { text: "Error", correct: false },
+            { text: "'[object Object]'", correct: true },
+            { text: "undefined", correct: false },
+          ],
+        },
+
+        // DOM Questions
+        {
+          question:
+            "Which method returns the first element matching a selector?",
+          answers: [
+            { text: "document.getElementsByTagName()", correct: false },
+            { text: "document.querySelector()", correct: true },
+            { text: "document.querySelectorAll()", correct: false },
+            { text: "document.getElementById()", correct: false },
+          ],
+        },
+        {
+          question:
+            "Which event is triggered when an input value changes and loses focus?",
+          answers: [
+            { text: "input", correct: false },
+            { text: "blur", correct: false },
+            { text: "change", correct: true },
+            { text: "focusout", correct: false },
+          ],
+        },
+        {
+          question: "How can you stop event bubbling in DOM?",
+          answers: [
+            { text: "event.preventDefault()", correct: false },
+            { text: "event.stopPropagation()", correct: true },
+            { text: "event.cancelBubble()", correct: false },
+            { text: "event.stop()", correct: false },
+          ],
+        },
+
+        // API + Fetch Questions
+        {
+          question: "Which method is used to make a GET request using fetch?",
+          answers: [
+            { text: "ajax(url)", correct: false },
+            { text: "fetch(url)", correct: true },
+            { text: "fetch.get(url)", correct: false },
+
+            { text: "get(url)", correct: false },
+          ],
+        },
+        {
+          question: "What does 'async' keyword do in JavaScript?",
+          answers: [
+            { text: "Makes code faster", correct: false },
+            { text: "Makes function return a Promise", correct: true },
+            { text: "Waits for Promise to resolve", correct: false },
+            { text: "Blocks synchronous code", correct: false },
+          ],
+        },
+        {
+          question: "What will 'await' work with?",
+          answers: [
+            { text: "With all functions", correct: false },
+            { text: "Only with Promises", correct: true },
+            { text: "With async functions only", correct: false },
+            { text: "With setTimeout", correct: false },
+          ],
+        },
+
+        // More Questions (Add 15 more here for full 30 total)
+        {
+          question: "What is the default position value of an HTML element?",
+          answers: [
+            { text: "static", correct: true },
+            { text: "relative", correct: false },
+            { text: "absolute", correct: false },
+            { text: "fixed", correct: false },
+          ],
+        },
+        {
+          question:
+            "Which property makes a flex child grow to fill available space?",
+          answers: [
+            { text: "flex-grow", correct: true },
+            { text: "justify-content", correct: false },
+            { text: "align-self", correct: false },
+            { text: "order", correct: false },
+          ],
+        },
+        {
+          question: "How to select all direct children of a div using CSS?",
+          answers: [
+            { text: "div > *", correct: true },
+            { text: "div + *", correct: false },
+            { text: "div *", correct: false },
+            { text: "div.child", correct: false },
+          ],
+        },
+        {
+          question: "Which loop is best for iterating object properties?",
+          answers: [
+            { text: "for...in", correct: true },
+            { text: "for...of", correct: false },
+            { text: "forEach", correct: false },
+            { text: "while", correct: false },
+          ],
+        },
+        {
+          question: "What is the output of 'null == undefined'?",
+          answers: [
+            { text: "true", correct: true },
+            { text: "false", correct: false },
+            { text: "Error", correct: false },
+            { text: "undefined", correct: false },
+          ],
+        },
+        {
+          question: "Which method adds an element at the end of an array?",
+          answers: [
+            { text: "push()", correct: true },
+            { text: "pop()", correct: false },
+            { text: "shift()", correct: false },
+            { text: "unshift()", correct: false },
+          ],
+        },
+        {
+          question: "Which API provides browser location info?",
+          answers: [
+            { text: "Geolocation API", correct: true },
+            { text: "Fetch API", correct: false },
+            { text: "Navigator API", correct: false },
+            { text: "Storage API", correct: false },
+          ],
+        },
+        {
+          question: "Which method is used to convert JS object to JSON string?",
+          answers: [
+            { text: "JSON.stringify()", correct: true },
+            { text: "JSON.toString()", correct: false },
+            { text: "toJSON()", correct: false },
+            { text: "JSON.format()", correct: false },
+          ],
+        },
+        {
+          question: "How can you detect if an element is visible in viewport?",
+          answers: [
+            { text: "Intersection Observer API", correct: true },
+            { text: "MutationObserver", correct: false },
+            { text: "ResizeObserver", correct: false },
+            { text: "Viewport API", correct: false },
+          ],
+        },
+      ];
+
+      const questionElement = document.getElementById("question");
+      const answerButtons = document.getElementById("answer-buttons");
+      const nextButton = document.getElementById("next-btn");
+      const timerElement = document.getElementById("timer");
+
+      let currentQuestionIndex = 0;
+      let score = 0;
+      let questionTimer;
+      const questionTime = 30;
+      let timeLeft = questionTime;
+      let totalStartTime;
+
+      function startGame() {
+        currentQuestionIndex = 0;
+        score = 0;
+        totalStartTime = new Date();
+        nextButton.innerHTML = "Next";
+        showQuestion();
+      }
+
+      function startTimer() {
+        clearInterval(questionTimer);
+        timeLeft = questionTime;
+        updateTimerDisplay();
+        questionTimer = setInterval(() => {
+          timeLeft--;
+          updateTimerDisplay();
+          if (timeLeft <= 0) {
+            clearInterval(questionTimer);
+            autoSelectAnswer();
+          }
+        }, 1000);
+      }
+
+      function updateTimerDisplay() {
+        timerElement.innerText = `⏳ Time Left: ${timeLeft}s`;
+      }
+
+      function autoSelectAnswer() {
+        Array.from(answerButtons.children).forEach((button) => {
+          if (button.dataset.correct === "true") {
+            button.classList.add("correct");
+          } else {
+            button.classList.add("incorrect");
+          }
+          button.disabled = true;
+        });
+        nextButton.style.display = "block";
+      }
+
+      function showQuestion() {
+        resetState();
+        startTimer();
+        let currentQuestion = questions[currentQuestionIndex];
+        let questionNo = currentQuestionIndex + 1;
+        questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+        currentQuestion.answers.forEach((answer) => {
+          const button = document.createElement("button");
+          button.innerText = answer.text;
+          button.classList.add("option");
+          if (answer.correct) {
+            button.dataset.correct = answer.correct;
+          }
+          button.addEventListener("click", selectAnswer);
+          answerButtons.appendChild(button);
+        });
+      }
+
+      function resetState() {
+        clearInterval(questionTimer);
+        nextButton.style.display = "none";
+        timerElement.innerText = "";
+        while (answerButtons.firstChild) {
+          answerButtons.removeChild(answerButtons.firstChild);
+        }
+      }
+
+      function selectAnswer(e) {
+        clearInterval(questionTimer);
+        const selectedBtn = e.target;
+        const isCorrect = selectedBtn.dataset.correct === "true";
+        if (isCorrect) {
+          selectedBtn.classList.add("correct");
+          score++;
+        } else {
+          selectedBtn.classList.add("incorrect");
+        }
+
+        Array.from(answerButtons.children).forEach((button) => {
+          if (button.dataset.correct === "true") {
+            button.classList.add("correct");
+          }
+          button.disabled = true;
+        });
+
+        nextButton.style.display = "block";
+      }
+
+      nextButton.addEventListener("click", () => {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+          showQuestion();
+        } else {
+          showScore();
+        }
+      });
+
+      function showScore() {
+        clearInterval(questionTimer);
+        resetState();
+        const totalEndTime = new Date();
+        const totalTimeTaken = Math.floor((totalEndTime - totalStartTime) / 1000);
+        const minutes = Math.floor(totalTimeTaken / 60);
+        const seconds = totalTimeTaken % 60;
+
+        questionElement.innerHTML = `🎉 You scored ${score} out of ${questions.length}<br>🎯 Percentage: <b>${((score / questions.length) * 100).toFixed(2)}%</b><br>⏱️ Total Time: ${minutes}m ${seconds}s`;
+
+        nextButton.innerHTML = "Play Again";
+        nextButton.style.display = "block";
+        nextButton.addEventListener("click", startGame);
+      }
+
+      startGame();
+    </script>
+  </body>
+</html>
